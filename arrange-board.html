@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="편곡보드">
+<meta name="theme-color" content="#7c6ff7">
+<link rel="manifest" href="./manifest.json">
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="192x192" href="./icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="./icons/icon-512.png">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjAwIDIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM1MzVjYyIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1YzI0ODgiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdHIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM4OGVkYjgiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNWRkODk4Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJnUiIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmY5MDkwIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmNjI2MiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ1kiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmY2M2MCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmFhMzAiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJ3cyIgeD0iLTEwJSIgeT0iLTEwJSIgd2lkdGg9IjEyMCUiIGhlaWdodD0iMTIwJSI+CiAgICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjIuNSIgcmVzdWx0PSJibHVyIi8+CiAgICAgIDxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAuMSAgMCAwIDAgMCAwLjEgIDAgMCAwIDAgMC40ICAwIDAgMCAwLjUgMCIgaW49ImJsdXIiIHJlc3VsdD0ic2hhZG93Ii8+CiAgICAgIDxmZU1lcmdlPjxmZU1lcmdlTm9kZSBpbj0ic2hhZG93Ii8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgogIDwhLS0gQmFja2dyb3VuZCAtLT4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgcng9IjQwIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDwhLS0gR3JlZW4gYmxvY2sgKEkpIC0tPgogIDxyZWN0IHg9IjIwIiB5PSI4OCIgd2lkdGg9IjQ2IiBoZWlnaHQ9IjY4IiByeD0iNyIgZmlsbD0idXJsKCNnRykiLz4KICA8dGV4dCB4PSI0MyIgeT0iMTQzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic3lzdGVtLXVpLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiMxYTJhNWUiPkk8L3RleHQ+CiAgPCEtLSBSZWQgYmxvY2sgKFYpIC0tPgogIDxyZWN0IHg9Ijc3IiB5PSI3MCIgd2lkdGg9IjQ2IiBoZWlnaHQ9Ijg2IiByeD0iNyIgZmlsbD0idXJsKCNnUikiLz4KICA8dGV4dCB4PSIxMDAiIHk9IjE0MyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjMWEyYTVlIj5WPC90ZXh0PgogIDwhLS0gR29sZCBibG9jayAoQykgLS0+CiAgPHJlY3QgeD0iMTM0IiB5PSI5MyIgd2lkdGg9IjQ2IiBoZWlnaHQ9IjYzIiByeD0iNyIgZmlsbD0idXJsKCNnWSkiLz4KICA8dGV4dCB4PSIxNTciIHk9IjE0MyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjMWEyYTVlIj5DPC90ZXh0PgogIDwhLS0gV2F2ZWZvcm0gb3V0bGluZSAoZGFyayBzaGFkb3cpIC0tPgogIDxwYXRoIGQ9Ik0xMCwxMDQgQzE2LDEwNCAyMCw5NiAyNiw4NCBDMzAsNzQgMzQsNTggNDAsNDYgQzQ0LDU4IDQ4LDcwIDU0LDgwIEM1OCw4OCA2Miw5OCA2OCw5MCBDNzQsNzggODAsNTYgODgsMzggQzkzLDI0IDk3LDEyIDEwMCwxOCBDMTAzLDI0IDEwNyw0MiAxMTQsNjAgQzExOSw3MyAxMjQsODMgMTMyLDkwIEMxMzYsODIgMTQwLDY4IDE0Niw1OSBDMTUwLDcwIDE1Myw4MyAxNTgsOTMgQzE2MywxMDIgMTcwLDEwNiAxODAsMTA2IEMxODUsMTA2IDE5MCwxMDYgMTk1LDEwNiIKICAgICAgICBzdHJva2U9InJnYmEoMTUsMTUsNjUsMC41KSIgc3Ryb2tlLXdpZHRoPSIxMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPCEtLSBXYXZlZm9ybSB3aGl0ZSAtLT4KICA8cGF0aCBkPSJNMTAsMTA0IEMxNiwxMDQgMjAsOTYgMjYsODQgQzMwLDc0IDM0LDU4IDQwLDQ2IEM0NCw1OCA0OCw3MCA1NCw4MCBDNTgsODggNjIsOTggNjgsOTAgQzc0LDc4IDgwLDU2IDg4LDM4IEM5MywyNCA5NywxMiAxMDAsMTggQzEwMywyNCAxMDcsNDIgMTE0LDYwIEMxMTksNzMgMTI0LDgzIDEzMiw5MCBDMTM2LDgyIDE0MCw2OCAxNDYsNTkgQzE1MCw3MCAxNTMsODMgMTU4LDkzIEMxNjMsMTAyIDE3MCwxMDYgMTgwLDEwNiBDMTg1LDEwNiAxOTAsMTA2IDE5NSwxMDYiCiAgICAgICAgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI3LjUiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDwhLS0gVGltZWxpbmUgYmFyIC0tPgogIDxyZWN0IHg9IjE2IiB5PSIxNjYiIHdpZHRoPSIxNjgiIGhlaWdodD0iMTAiIHJ4PSI1IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNCkiLz4KICA8IS0tIFBsYXloZWFkIGFycm93IC0tPgogIDxwb2x5Z29uIHBvaW50cz0iODQsMTU4IDg0LDE4MiAxMDQsMTcwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuOTUpIi8+Cjwvc3ZnPgo=">
+<title>편곡보드</title>
+<style>
+:root{
+  --bg:#0f0f13;--surface:#1a1a24;--surface2:#22222f;--border:#2e2e42;
+  --accent:#7c6ff7;--text:#e8e8f0;--muted:#888899;--danger:#ef4444;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',-apple-system,sans-serif;background:var(--bg);color:var(--text);height:100vh;overflow:hidden;display:flex;flex-direction:column;}
+
+/* ── HEADER ── */
+header{background:var(--surface);border-bottom:1px solid var(--border);padding:10px 16px;display:flex;align-items:center;gap:12px;flex-shrink:0;}
+.logo{font-size:18px;font-weight:800;color:var(--accent);white-space:nowrap;}
+.song-meta{display:flex;gap:6px;flex:1;flex-wrap:wrap;align-items:flex-end;}
+.mg{display:flex;flex-direction:column;}
+.ml{font-size:9px;color:var(--muted);margin-bottom:2px;}
+.mi{background:var(--surface2);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:4px 8px;font-size:12px;outline:none;transition:border-color .2s;}
+.mi:focus{border-color:var(--accent);}
+.mi.t{width:160px;font-weight:600;}
+.mi.s{width:68px;text-align:center;}
+.hdr-act{display:flex;gap:5px;}
+
+/* ── BUTTONS ── */
+.btn{border:none;border-radius:6px;padding:5px 10px;font-size:11px;font-weight:600;cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:4px;}
+.bp{background:var(--accent);color:#fff;}.bp:hover{background:#6b5fe6;}
+.bg{background:transparent;color:var(--muted);border:1px solid var(--border);}.bg:hover{color:var(--text);border-color:var(--accent);}
+.bsm{padding:3px 8px;font-size:10px;}
+.bd{background:rgba(239,68,68,.15);color:var(--danger);border:1px solid rgba(239,68,68,.3);}.bd:hover{background:rgba(239,68,68,.25);}
+
+/* ── LAYOUT ── */
+.app{flex:1;display:flex;overflow:hidden;}
+.sidebar{width:220px;min-width:220px;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden;flex-shrink:0;}
+.sb-hdr{padding:10px 11px 8px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
+.sb-t{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
+.badge{background:var(--accent);color:#fff;border-radius:20px;padding:1px 6px;font-size:10px;font-weight:700;}
+.sl{overflow-y:auto;flex:1;padding:4px;}
+.si{display:flex;align-items:center;gap:6px;padding:6px 7px;border-radius:6px;cursor:pointer;transition:all .15s;margin-bottom:2px;border:1px solid transparent;}
+.si:hover{background:var(--surface2);}
+.si.act{background:var(--surface2);border-color:var(--accent);}
+.si-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.si-nm{font-size:12px;font-weight:600;flex:1;}
+.si-bars{font-size:10px;color:var(--muted);}
+.dh{color:var(--muted);opacity:0;font-size:11px;cursor:grab;}
+.si:hover .dh{opacity:1;}
+
+/* ── MAIN AREA ── */
+.main{flex:1;display:flex;flex-direction:column;overflow:hidden;min-width:0;}
+
+/* ── TIMELINE CONTROLS ── */
+.tl-ctrl{background:var(--surface);border-bottom:1px solid var(--border);padding:8px 16px;display:flex;align-items:center;gap:9px;flex-shrink:0;}
+.tl-lbl{font-size:12px;font-weight:800;color:var(--accent);white-space:nowrap;}
+.vm-wrap{display:flex;background:var(--surface2);border-radius:6px;padding:2px;gap:2px;}
+.vmb{padding:3px 9px;border-radius:4px;font-size:11px;font-weight:600;border:none;background:transparent;color:var(--muted);cursor:pointer;transition:all .15s;white-space:nowrap;}
+.vmb.on{background:var(--accent);color:#fff;}
+.spacer{flex:1;}
+
+/* ── TIMELINE SCROLL AREA ── */
+.tl-scroll{overflow-x:auto;overflow-y:hidden;flex-shrink:0;}
+.tl-scroll::-webkit-scrollbar{height:4px;}
+.tl-rows{display:flex;flex-direction:column;}
+/* section mode: fill width */
+.tl-rows.sm{min-width:100%;}
+/* bar/beat/eighth mode: expand for horizontal scroll */
+.tl-rows.gm{min-width:max-content;}
+
+/* ── META ROW ── */
+.meta-row{display:flex;background:rgba(0,0,0,.35);border-bottom:1px solid var(--border);}
+.ms{display:flex;align-items:center;gap:6px;padding:4px 9px;font-size:10px;border-right:1px dashed var(--border);cursor:pointer;position:relative;white-space:nowrap;transition:background .15s;}
+.ms:hover{background:rgba(124,111,247,.1);}
+.mk{color:var(--accent);font-weight:700;}
+.mb{color:#f97316;font-weight:700;}
+.mts{color:#22c55e;font-weight:700;}
+.mcd{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;}
+
+/* ── SECTION BLOCKS (section mode) ── */
+.sb-row{display:flex;gap:3px;padding:8px 10px;align-items:stretch;min-height:60px;}
+.tl-blk{border-radius:9px;padding:7px 10px;cursor:pointer;transition:all .2s;display:flex;flex-direction:column;justify-content:space-between;min-width:50px;border:2px solid transparent;user-select:none;}
+.tl-blk:hover{filter:brightness(1.15);transform:translateY(-2px);}
+.tl-blk.sel{border-color:#fff!important;box-shadow:0 4px 16px rgba(0,0,0,.5);}
+.tl-blk.dl{box-shadow:-3px 0 0 #fff!important;}
+.tl-blk.dr{box-shadow:3px 0 0 #fff!important;}
+.tbn{font-size:11px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.tbb{font-size:9px;color:rgba(255,255,255,.7);}
+
+/* ── GRID MODE (bar/beat/eighth) ── */
+.gm-area{padding:6px 10px 8px;}
+.gm-hdrs{display:flex;}
+.gm-hdr{display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;border-radius:7px 7px 0 0;padding:5px 7px;cursor:pointer;user-select:none;border:2px solid transparent;border-bottom:none;white-space:nowrap;overflow:hidden;flex-shrink:0;transition:all .15s;}
+.gm-hdr:hover{filter:brightness(1.1);}
+.gm-hdr.sel{border-color:#fff;border-bottom:none;}
+.gm-barnums{display:flex;}
+.gm-bn{font-size:9px;color:var(--muted);text-align:center;border-left:3px solid rgba(180,180,220,.7);padding:2px 2px;flex-shrink:0;background:rgba(0,0,0,.25);}
+.gm-strip{display:flex;}
+.gm-bgrp{display:flex;flex-shrink:0;}
+.gm-cell{display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:var(--text);padding:4px 3px;background:var(--surface2);flex-shrink:0;white-space:nowrap;border-bottom:1px solid var(--border);}
+.gm-cell.bar-start{border-left:3px solid rgba(180,180,220,.7);}
+.gm-cell.bd4{border-left:1px solid rgba(150,150,180,.5);}
+.gm-cell.bd8{border-left:1px dashed rgba(130,130,160,.35);}
+.gm-cell.mt{color:rgba(100,100,120,.6);}
+
+/* ── EXPANDED AREA (outside scroll) ── */
+.exp-area{flex:1;overflow-y:auto;overflow-x:hidden;}
+.exp-card{background:var(--surface);border-top:1px solid var(--border);animation:ea .2s ease;}
+@keyframes ea{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.exp-hdr{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--border);}
+.exp-stripe{width:4px;min-height:30px;border-radius:2px;flex-shrink:0;}
+.exp-ttl{font-size:16px;font-weight:800;flex:1;}
+.exp-sub{font-size:11px;color:var(--muted);}
+.exp-body{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:12px 16px;}
+.exp-full{grid-column:1/-1;}
+.elbl{font-size:9px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;}
+.exp-instrs{display:flex;flex-direction:column;gap:4px;}
+.exp-instr{display:flex;align-items:center;gap:6px;padding:5px 7px;background:var(--surface2);border-radius:6px;}
+.exp-instr svg{width:18px;height:18px;flex-shrink:0;}
+.ei-nm{font-size:11px;font-weight:700;}
+.ei-dt{font-size:9px;color:var(--muted);}
+.exp-memo{background:var(--surface2);border-radius:6px;padding:9px;font-size:11px;line-height:1.6;white-space:pre-wrap;min-height:40px;}
+.btn-x{background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;line-height:1;}
+.btn-x:hover{color:var(--text);}
+
+/* ── CHORD GRID ── */
+.cg-wrap{overflow-x:auto;}
+.cg-inner{display:inline-flex;flex-direction:column;}
+.cg-rows{display:flex;}
+/* Each bar group: column flex with thick left border = bar line */
+.cg-bg{display:flex;flex-direction:column;border-left:3px solid rgba(210,210,240,.85);flex-shrink:0;}
+.cg-bg:first-child{border-left:3px solid rgba(210,210,240,.85);}
+.cg-blbl{font-size:9px;font-weight:700;color:var(--muted);text-align:center;padding:2px 4px;background:rgba(0,0,0,.3);white-space:nowrap;}
+.cg-cells{display:flex;}
+/* Cell wrappers: separator borders */
+.cg-cw{flex-shrink:0;}                                           /* bar div=1: no extra border */
+.cg-cw.bs4{border-left:1px solid rgba(150,150,190,.6);}          /* thin: beat separator (4-div) */
+.cg-cw.bs8q{border-left:1px solid rgba(150,150,190,.5);}         /* thin: quarter-note separator in 8-div */
+.cg-cw.bs8e{border-left:1px dashed rgba(130,130,160,.35);}       /* dashed: eighth-note separator */
+/* Chord input */
+.cg-inp{height:30px;min-width:62px;background:var(--surface2);border:none;border-bottom:1px solid var(--border);color:var(--text);font-size:12px;font-weight:600;text-align:center;outline:none;padding:0 5px;font-family:inherit;display:block;transition:background .15s;}
+.cg-inp:focus{background:rgba(124,111,247,.18);}
+/* Display cell (read-only) */
+.cg-dp{height:28px;min-width:62px;background:var(--surface2);border-bottom:1px solid var(--border);display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;padding:0 4px;white-space:nowrap;}
+.cg-dp.em{color:rgba(100,100,120,.6);}
+
+/* Chord div mode selector */
+.cg-mode{display:flex;gap:3px;margin-bottom:7px;}
+.cgm-btn{padding:3px 8px;border-radius:4px;font-size:10px;font-weight:600;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;transition:all .15s;}
+.cgm-btn.on{background:var(--accent);color:#fff;border-color:var(--accent);}
+
+/* ── EDITOR PANEL ── */
+.ed-panel{background:var(--surface);border-top:2px solid var(--border);flex-shrink:0;display:flex;flex-direction:column;transition:height .3s cubic-bezier(.4,0,.2,1);height:40px;overflow:hidden;}
+.ed-panel.open{height:48vh;}
+.ed-hnd{display:flex;align-items:center;gap:8px;padding:0 16px;height:40px;flex-shrink:0;border-bottom:1px solid transparent;}
+.ed-panel.open .ed-hnd{border-bottom-color:var(--border);}
+.ed-lbl{font-size:11px;font-weight:700;color:var(--muted);flex:1;}
+.ed-lbl .sn{color:var(--text);}
+.ed-tog{background:none;border:1px solid var(--border);color:var(--muted);border-radius:5px;padding:2px 8px;cursor:pointer;font-size:10px;transition:all .15s;}
+.ed-tog:hover{border-color:var(--accent);color:var(--accent);}
+.ed-body{flex:1;overflow-y:auto;padding:12px 16px;display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.ef{grid-column:1/-1;}
+.ec{background:var(--bg);border:1px solid var(--border);border-radius:9px;padding:10px;}
+.ect{font-size:9px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;}
+.ed-shdr{display:flex;align-items:center;gap:8px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+.ed-cdot{width:12px;height:12px;border-radius:50%;flex-shrink:0;}
+.ed-tti{font-size:15px;font-weight:800;background:none;border:none;color:var(--text);outline:none;flex:1;}
+.ed-tti:focus{border-bottom:2px solid var(--accent);}
+.ef2{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:5px 9px;font-size:12px;outline:none;transition:border-color .2s;}
+.ef2:focus{border-color:var(--accent);}
+.memo2{resize:none;font-family:inherit;line-height:1.6;}
+.cs-row{display:flex;gap:4px;flex-wrap:wrap;}
+.csw{width:20px;height:20px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:all .15s;}
+.csw.on,.csw:hover{border-color:#fff;transform:scale(1.2);}
+.il{display:flex;flex-direction:column;gap:5px;}
+.ir{display:flex;align-items:center;gap:6px;padding:5px 7px;background:var(--surface2);border-radius:6px;border:1px solid var(--border);transition:border-color .15s;}
+.ir:hover{border-color:var(--accent);}
+.iib{width:28px;height:28px;border-radius:5px;background:var(--surface);border:1px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text);padding:2px;flex-shrink:0;transition:all .15s;}
+.iib:hover{border-color:var(--accent);}
+.iib svg{width:18px;height:18px;}
+.ini{flex:1;background:none;border:none;color:var(--text);font-size:11px;font-weight:600;outline:none;}
+.idi{background:none;border:none;color:var(--muted);font-size:10px;outline:none;width:120px;text-align:right;}
+.rmb{background:none;border:none;color:var(--muted);cursor:pointer;font-size:13px;border-radius:3px;padding:1px 3px;transition:all .15s;}
+.rmb:hover{color:var(--danger);background:rgba(239,68,68,.1);}
+
+/* ── MODALS ── */
+.mov{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:opacity .2s;}
+.mov.on{opacity:1;pointer-events:all;}
+.mbox{background:var(--surface);border:1px solid var(--border);border-radius:13px;padding:18px;width:360px;max-width:92vw;transform:translateY(18px);transition:transform .2s;}
+.mov.on .mbox{transform:translateY(0);}
+.mt2{font-size:14px;font-weight:800;margin-bottom:12px;}
+.fg{margin-bottom:10px;}
+.fg label{font-size:10px;color:var(--muted);margin-bottom:4px;display:block;font-weight:600;}
+.fg input,.fg select{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:5px 9px;font-size:12px;outline:none;transition:border-color .2s;}
+.fg input:focus,.fg select:focus{border-color:var(--accent);}
+.mact{display:flex;gap:5px;justify-content:flex-end;margin-top:14px;}
+
+/* ── ICON PICKER ── */
+.ipov{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:300;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:opacity .2s;}
+.ipov.on{opacity:1;pointer-events:all;}
+.ipbox{background:var(--surface);border:1px solid var(--border);border-radius:13px;padding:16px;width:520px;max-width:95vw;max-height:76vh;display:flex;flex-direction:column;transform:translateY(18px);transition:transform .2s;}
+.ipov.on .ipbox{transform:translateY(0);}
+.iphdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+.ipttl{font-size:14px;font-weight:800;}
+.ipx{background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;}
+.ipsrc{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:5px 9px;font-size:12px;outline:none;margin-bottom:10px;}
+.ipsrc:focus{border-color:var(--accent);}
+.ipscr{overflow-y:auto;flex:1;}
+.ipcat{font-size:9px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin:9px 0 5px;}
+.ipgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:3px;}
+.ipopt{display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 3px;border-radius:7px;cursor:pointer;border:1px solid transparent;transition:all .15s;}
+.ipopt:hover{background:var(--surface2);border-color:var(--accent);}
+.ipopt.on{background:rgba(124,111,247,.15);border-color:var(--accent);}
+.ipopt svg{width:26px;height:26px;}
+.ipnm{font-size:8px;color:var(--muted);text-align:center;max-width:68px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+
+/* ── META POPUP ── */
+.mpop{position:fixed;z-index:400;background:var(--surface);border:1px solid var(--accent);border-radius:9px;padding:12px;width:220px;box-shadow:0 8px 28px rgba(0,0,0,.6);display:none;}
+.mpop.on{display:block;}
+.mptt{font-size:11px;font-weight:800;margin-bottom:8px;}
+.mpr{display:flex;align-items:center;gap:6px;margin-bottom:6px;}
+.mpl{font-size:9px;color:var(--muted);width:32px;flex-shrink:0;}
+.mpi{flex:1;background:var(--surface2);border:1px solid var(--border);border-radius:4px;color:var(--text);padding:3px 6px;font-size:11px;outline:none;}
+.mpi:focus{border-color:var(--accent);}
+.mpact{display:flex;gap:4px;margin-top:8px;}
+
+/* ── EMPTY ── */
+.empty{display:flex;flex-direction:column;align-items:center;justify-content:center;height:120px;color:var(--muted);gap:8px;font-size:13px;}
+
+/* ── SCROLL ── */
+::-webkit-scrollbar{width:4px;height:4px;}
+::-webkit-scrollbar-track{background:transparent;}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
+::-webkit-scrollbar-thumb:hover{background:var(--accent);}
+.faded{opacity:.35;}
+
+/* ── WELCOME SCREEN ── */
+.welcome-ov{position:fixed;inset:0;background:var(--bg);z-index:600;display:flex;align-items:center;justify-content:center;transition:opacity .4s;}
+.welcome-ov.hidden{opacity:0;pointer-events:none;}
+.welcome-box{display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center;padding:24px;animation:wba .65s ease;}
+@keyframes wba{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.welcome-icon{font-size:76px;line-height:1;filter:drop-shadow(0 4px 20px rgba(124,111,247,.5));}
+.welcome-title{font-size:50px;font-weight:900;color:var(--accent);letter-spacing:-2px;}
+.welcome-sub{font-size:14px;color:var(--muted);max-width:300px;line-height:1.7;}
+.welcome-btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:6px;}
+.wbtn{padding:14px 34px;border-radius:12px;font-size:14px;font-weight:700;cursor:pointer;transition:all .2s;border:none;display:inline-flex;align-items:center;gap:8px;}
+.wbtn-p{background:var(--accent);color:#fff;box-shadow:0 4px 24px rgba(124,111,247,.45);}.wbtn-p:hover{background:#6b5fe6;transform:translateY(-3px);box-shadow:0 8px 28px rgba(124,111,247,.55);}
+.wbtn-s{background:var(--surface);color:var(--text);border:1px solid var(--border);}.wbtn-s:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-3px);}
+
+/* ── SONG METAS (header multi-key/bpm/time) ── */
+.song-metas-wrap{display:flex;align-items:flex-end;gap:3px;flex-wrap:wrap;}
+.meta-set{display:flex;align-items:flex-end;gap:2px;padding:2px 5px 2px 5px;border:1px solid var(--border);border-radius:7px;background:var(--surface2);}
+.meta-set .mg{gap:0;}
+.meta-arrow-lbl{color:var(--accent);font-size:16px;font-weight:900;padding:0 1px;align-self:flex-end;margin-bottom:4px;line-height:1;}
+.meta-add-btn{height:28px;padding:0 8px;font-size:15px;font-weight:700;cursor:pointer;background:transparent;border:1px dashed var(--border);border-radius:6px;color:var(--muted);transition:all .15s;align-self:flex-end;margin-bottom:1px;line-height:1;}
+.meta-add-btn:hover{border-color:var(--accent);color:var(--accent);}
+
+/* ── DASHBOARD ── */
+.dash-ov{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:500;display:flex;flex-direction:column;align-items:center;padding:18px 24px 32px;overflow-y:auto;overflow-x:hidden;opacity:0;pointer-events:none;transition:opacity .25s;}
+.dash-ov.on{opacity:1;pointer-events:all;}
+.dash-toolbar{display:flex;align-items:center;gap:8px;width:1122px;max-width:100%;margin-bottom:14px;flex-shrink:0;}
+.dash-ttl-bar{font-size:14px;font-weight:800;color:#fff;flex:1;}
+.dash-page{width:1122px;min-height:794px;max-width:calc(100vw - 48px);background:#fff;color:#1a1a24;border-radius:6px;margin-bottom:22px;padding:34px 40px;box-shadow:0 8px 48px rgba(0,0,0,.6);display:flex;flex-direction:column;flex-shrink:0;}
+.dash-pg-hdr{display:flex;align-items:flex-start;justify-content:space-between;border-bottom:3px solid #7c6ff7;padding-bottom:14px;margin-bottom:18px;}
+.dash-song-title{font-size:26px;font-weight:900;color:#111;}
+.dash-song-sub{font-size:11px;color:#777;margin-top:3px;}
+.dash-metas-row{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-top:7px;}
+.dash-chip{background:#ebe9ff;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;color:#5244c9;}
+.dash-chip-bpm{background:#fff3e8;color:#c2540a;}
+.dash-chip-time{background:#e8f5e9;color:#2e7d32;}
+.dash-chip-genre{background:#f3e5f5;color:#6a1b9a;}
+.dash-chip-arr{color:#7c6ff7;font-weight:900;font-size:15px;}
+.dash-pg-num{font-size:10px;color:#aaa;text-align:right;white-space:nowrap;}
+.dash-sec-lbl{font-size:10px;font-weight:800;color:#7c6ff7;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;margin-top:4px;}
+.dash-tl{display:flex;gap:4px;height:56px;margin-bottom:14px;}
+.dash-tl-blk{border-radius:7px;display:flex;flex-direction:column;justify-content:center;padding:6px 8px;min-width:36px;overflow:hidden;}
+.dash-tl-nm{font-size:10px;font-weight:800;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.dash-tl-sub{font-size:8px;color:rgba(255,255,255,.8);margin-top:1px;}
+.dash-tbl{width:100%;border-collapse:collapse;font-size:11px;}
+.dash-tbl th{background:#f0efff;color:#4a3fbf;font-weight:800;padding:6px 10px;text-align:left;border-bottom:2px solid #c8c4f0;}
+.dash-tbl td{padding:5px 10px;border-bottom:1px solid #eee;vertical-align:middle;}
+.dash-tbl tr:last-child td{border-bottom:none;}
+.dash-dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:6px;vertical-align:middle;flex-shrink:0;}
+/* Micro section cards */
+.dash-mc{border-left:5px solid #ccc;border-radius:0 9px 9px 0;padding:14px 18px 12px;margin-bottom:14px;background:#fafafa;}
+.dash-mc-hdr{display:flex;align-items:center;gap:10px;margin-bottom:10px;border-bottom:1px solid #eee;padding-bottom:8px;}
+.dash-mc-title{font-size:17px;font-weight:900;color:#111;}
+.dash-mc-badge{font-size:10px;color:#666;background:#eee;border-radius:12px;padding:2px 8px;white-space:nowrap;}
+.dash-mc-meta{font-size:10px;color:#888;margin-left:auto;display:flex;gap:5px;flex-wrap:wrap;}
+.dash-mc-chip{background:#f0efff;border-radius:12px;padding:2px 7px;color:#5244c9;font-weight:700;}
+.dash-mc-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.dash-mc-full{grid-column:1/-1;}
+.dash-mc-lbl{font-size:9px;font-weight:800;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;}
+.dash-mc-val{font-size:11px;line-height:1.6;color:#333;}
+.dash-instr-list{display:flex;flex-wrap:wrap;gap:4px;}
+.dash-instr-tag{background:#e8f0fe;border-radius:5px;padding:2px 8px 2px 5px;font-size:10px;font-weight:600;color:#1a56db;display:inline-flex;align-items:center;gap:4px;}
+.dash-instr-tag svg{width:14px;height:14px;flex-shrink:0;}
+.dash-chord-wrap{display:flex;gap:2px;flex-wrap:wrap;}
+.dash-chord-bar{display:flex;gap:1px;background:#e8e8f5;border-radius:5px;padding:3px 5px;align-items:center;}
+.dash-chord-bar-lbl{font-size:8px;color:#888;margin-right:2px;}
+.dash-chord-cell{background:#fff;border-radius:3px;padding:2px 6px;font-size:10px;font-weight:700;color:#3730a3;border:1px solid #ddd;}
+.dash-chord-cell.em{color:#bbb;border-color:#eee;}
+.dash-memo{font-size:11px;color:#444;line-height:1.65;white-space:pre-wrap;background:#fff;border-radius:6px;padding:8px 10px;border:1px solid #e5e5e5;}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjAwIDIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM1MzVjYyIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1YzI0ODgiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdHIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM4OGVkYjgiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNWRkODk4Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJnUiIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmY5MDkwIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmNjI2MiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ1kiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmY2M2MCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmFhMzAiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJ3cyIgeD0iLTEwJSIgeT0iLTEwJSIgd2lkdGg9IjEyMCUiIGhlaWdodD0iMTIwJSI+CiAgICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjIuNSIgcmVzdWx0PSJibHVyIi8+CiAgICAgIDxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAuMSAgMCAwIDAgMCAwLjEgIDAgMCAwIDAgMC40ICAwIDAgMCAwLjUgMCIgaW49ImJsdXIiIHJlc3VsdD0ic2hhZG93Ii8+CiAgICAgIDxmZU1lcmdlPjxmZU1lcmdlTm9kZSBpbj0ic2hhZG93Ii8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgogIDwhLS0gQmFja2dyb3VuZCAtLT4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgcng9IjQwIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDwhLS0gR3JlZW4gYmxvY2sgKEkpIC0tPgogIDxyZWN0IHg9IjIwIiB5PSI4OCIgd2lkdGg9IjQ2IiBoZWlnaHQ9IjY4IiByeD0iNyIgZmlsbD0idXJsKCNnRykiLz4KICA8dGV4dCB4PSI0MyIgeT0iMTQzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic3lzdGVtLXVpLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiMxYTJhNWUiPkk8L3RleHQ+CiAgPCEtLSBSZWQgYmxvY2sgKFYpIC0tPgogIDxyZWN0IHg9Ijc3IiB5PSI3MCIgd2lkdGg9IjQ2IiBoZWlnaHQ9Ijg2IiByeD0iNyIgZmlsbD0idXJsKCNnUikiLz4KICA8dGV4dCB4PSIxMDAiIHk9IjE0MyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjMWEyYTVlIj5WPC90ZXh0PgogIDwhLS0gR29sZCBibG9jayAoQykgLS0+CiAgPHJlY3QgeD0iMTM0IiB5PSI5MyIgd2lkdGg9IjQ2IiBoZWlnaHQ9IjYzIiByeD0iNyIgZmlsbD0idXJsKCNnWSkiLz4KICA8dGV4dCB4PSIxNTciIHk9IjE0MyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjMWEyYTVlIj5DPC90ZXh0PgogIDwhLS0gV2F2ZWZvcm0gb3V0bGluZSAoZGFyayBzaGFkb3cpIC0tPgogIDxwYXRoIGQ9Ik0xMCwxMDQgQzE2LDEwNCAyMCw5NiAyNiw4NCBDMzAsNzQgMzQsNTggNDAsNDYgQzQ0LDU4IDQ4LDcwIDU0LDgwIEM1OCw4OCA2Miw5OCA2OCw5MCBDNzQsNzggODAsNTYgODgsMzggQzkzLDI0IDk3LDEyIDEwMCwxOCBDMTAzLDI0IDEwNyw0MiAxMTQsNjAgQzExOSw3MyAxMjQsODMgMTMyLDkwIEMxMzYsODIgMTQwLDY4IDE0Niw1OSBDMTUwLDcwIDE1Myw4MyAxNTgsOTMgQzE2MywxMDIgMTcwLDEwNiAxODAsMTA2IEMxODUsMTA2IDE5MCwxMDYgMTk1LDEwNiIKICAgICAgICBzdHJva2U9InJnYmEoMTUsMTUsNjUsMC41KSIgc3Ryb2tlLXdpZHRoPSIxMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPCEtLSBXYXZlZm9ybSB3aGl0ZSAtLT4KICA8cGF0aCBkPSJNMTAsMTA0IEMxNiwxMDQgMjAsOTYgMjYsODQgQzMwLDc0IDM0LDU4IDQwLDQ2IEM0NCw1OCA0OCw3MCA1NCw4MCBDNTgsODggNjIsOTggNjgsOTAgQzc0LDc4IDgwLDU2IDg4LDM4IEM5MywyNCA5NywxMiAxMDAsMTggQzEwMywyNCAxMDcsNDIgMTE0LDYwIEMxMTksNzMgMTI0LDgzIDEzMiw5MCBDMTM2LDgyIDE0MCw2OCAxNDYsNTkgQzE1MCw3MCAxNTMsODMgMTU4LDkzIEMxNjMsMTAyIDE3MCwxMDYgMTgwLDEwNiBDMTg1LDEwNiAxOTAsMTA2IDE5NSwxMDYiCiAgICAgICAgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI3LjUiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDwhLS0gVGltZWxpbmUgYmFyIC0tPgogIDxyZWN0IHg9IjE2IiB5PSIxNjYiIHdpZHRoPSIxNjgiIGhlaWdodD0iMTAiIHJ4PSI1IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNCkiLz4KICA8IS0tIFBsYXloZWFkIGFycm93IC0tPgogIDxwb2x5Z29uIHBvaW50cz0iODQsMTU4IDg0LDE4MiAxMDQsMTcwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuOTUpIi8+Cjwvc3ZnPgo=" class="logo-icon" style="height:34px;width:34px;border-radius:8px;cursor:pointer;transition:transform .15s,box-shadow .15s;flex-shrink:0;" onclick="goSectionVM()" title="편곡보드 — 클릭: 섹션 보기로 전환" onmouseover="this.style.transform='scale(1.08)';this.style.boxShadow='0 4px 16px rgba(124,111,247,.5)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+  <div class="song-meta">
+    <div class="mg"><div class="ml">곡 제목</div><input class="mi t" id="gTitle" placeholder="제목 없음"></div>
+    <div class="mg"><div class="ml">장르</div><input class="mi" id="gGenre" placeholder="Pop, R&B..." style="width:90px"></div>
+    <div class="mg"><div class="ml" style="margin-bottom:4px">조성 · BPM · 박자</div><div class="song-metas-wrap" id="songMetasWrap"></div></div>
+  </div>
+  <div class="hdr-act">
+    <button class="btn bg bsm" onclick="newProjectFromHeader()" title="새 프로젝트 시작">📄 새 프로젝트</button>
+    <button class="btn bg bsm" onclick="doExport()">💾 저장</button>
+    <button class="btn bg bsm" onclick="doImport()">📂 열기</button>
+    <button class="btn bg bsm" onclick="openDash()" title="대시보드 추출">📊 대시보드</button>
+    <button class="btn bp bsm" onclick="openAddDlg()">+ 섹션</button>
+  </div>
+</header>
+
+<div class="app">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sb-hdr">
+      <span class="sb-t">섹션 목록</span>
+      <span class="badge" id="sbCnt">0</span>
+    </div>
+    <div class="sl" id="sbList"></div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main">
+    <!-- Timeline controls -->
+    <div class="tl-ctrl">
+      <span class="tl-lbl">🗺 전체 타임라인</span>
+      <div class="vm-wrap">
+        <button class="vmb on" data-vm="section" onclick="setVM(this)">섹션</button>
+        <button class="vmb" data-vm="bar" onclick="setVM(this)">마디</button>
+        <button class="vmb" data-vm="beat" onclick="setVM(this)">4분할</button>
+        <button class="vmb" data-vm="eighth" onclick="setVM(this)">8분할</button>
+      </div>
+      <div class="spacer"></div>
+      <button class="btn bg bsm" onclick="openAddDlg()">+ 섹션 추가</button>
+    </div>
+
+    <!-- Timeline scroll (horizontal) -->
+    <div class="tl-scroll" id="tlScroll">
+      <div class="tl-rows sm" id="tlRows"></div>
+    </div>
+
+    <!-- Expanded detail area (outside scroll, full width) -->
+    <div class="exp-area" id="expArea"></div>
+
+    <!-- Editor panel (bottom, collapsible) -->
+    <div class="ed-panel" id="edPanel">
+      <div class="ed-hnd">
+        <span>✏️</span>
+        <span class="ed-lbl">섹션 편집: <span class="sn" id="edSName">–</span></span>
+        <button class="ed-tog" id="edTog" onclick="toggleEd()">▲ 열기</button>
+      </div>
+      <div class="ed-body" id="edBody"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Welcome Screen -->
+<div class="welcome-ov hidden" id="welcomeOv">
+  <div class="welcome-box">
+    <div class="welcome-icon"><img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjAwIDIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM1MzVjYyIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1YzI0ODgiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdHIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM4OGVkYjgiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNWRkODk4Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJnUiIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmY5MDkwIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmNjI2MiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ1kiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmY2M2MCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmFhMzAiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJ3cyIgeD0iLTEwJSIgeT0iLTEwJSIgd2lkdGg9IjEyMCUiIGhlaWdodD0iMTIwJSI+CiAgICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjIuNSIgcmVzdWx0PSJibHVyIi8+CiAgICAgIDxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAuMSAgMCAwIDAgMCAwLjEgIDAgMCAwIDAgMC40ICAwIDAgMCAwLjUgMCIgaW49ImJsdXIiIHJlc3VsdD0ic2hhZG93Ii8+CiAgICAgIDxmZU1lcmdlPjxmZU1lcmdlTm9kZSBpbj0ic2hhZG93Ii8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgogIDwhLS0gQmFja2dyb3VuZCAtLT4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgcng9IjQwIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDwhLS0gR3JlZW4gYmxvY2sgKEkpIC0tPgogIDxyZWN0IHg9IjIwIiB5PSI4OCIgd2lkdGg9IjQ2IiBoZWlnaHQ9IjY4IiByeD0iNyIgZmlsbD0idXJsKCNnRykiLz4KICA8dGV4dCB4PSI0MyIgeT0iMTQzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic3lzdGVtLXVpLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiMxYTJhNWUiPkk8L3RleHQ+CiAgPCEtLSBSZWQgYmxvY2sgKFYpIC0tPgogIDxyZWN0IHg9Ijc3IiB5PSI3MCIgd2lkdGg9IjQ2IiBoZWlnaHQ9Ijg2IiByeD0iNyIgZmlsbD0idXJsKCNnUikiLz4KICA8dGV4dCB4PSIxMDAiIHk9IjE0MyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjMWEyYTVlIj5WPC90ZXh0PgogIDwhLS0gR29sZCBibG9jayAoQykgLS0+CiAgPHJlY3QgeD0iMTM0IiB5PSI5MyIgd2lkdGg9IjQ2IiBoZWlnaHQ9IjYzIiByeD0iNyIgZmlsbD0idXJsKCNnWSkiLz4KICA8dGV4dCB4PSIxNTciIHk9IjE0MyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjMWEyYTVlIj5DPC90ZXh0PgogIDwhLS0gV2F2ZWZvcm0gb3V0bGluZSAoZGFyayBzaGFkb3cpIC0tPgogIDxwYXRoIGQ9Ik0xMCwxMDQgQzE2LDEwNCAyMCw5NiAyNiw4NCBDMzAsNzQgMzQsNTggNDAsNDYgQzQ0LDU4IDQ4LDcwIDU0LDgwIEM1OCw4OCA2Miw5OCA2OCw5MCBDNzQsNzggODAsNTYgODgsMzggQzkzLDI0IDk3LDEyIDEwMCwxOCBDMTAzLDI0IDEwNyw0MiAxMTQsNjAgQzExOSw3MyAxMjQsODMgMTMyLDkwIEMxMzYsODIgMTQwLDY4IDE0Niw1OSBDMTUwLDcwIDE1Myw4MyAxNTgsOTMgQzE2MywxMDIgMTcwLDEwNiAxODAsMTA2IEMxODUsMTA2IDE5MCwxMDYgMTk1LDEwNiIKICAgICAgICBzdHJva2U9InJnYmEoMTUsMTUsNjUsMC41KSIgc3Ryb2tlLXdpZHRoPSIxMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPCEtLSBXYXZlZm9ybSB3aGl0ZSAtLT4KICA8cGF0aCBkPSJNMTAsMTA0IEMxNiwxMDQgMjAsOTYgMjYsODQgQzMwLDc0IDM0LDU4IDQwLDQ2IEM0NCw1OCA0OCw3MCA1NCw4MCBDNTgsODggNjIsOTggNjgsOTAgQzc0LDc4IDgwLDU2IDg4LDM4IEM5MywyNCA5NywxMiAxMDAsMTggQzEwMywyNCAxMDcsNDIgMTE0LDYwIEMxMTksNzMgMTI0LDgzIDEzMiw5MCBDMTM2LDgyIDE0MCw2OCAxNDYsNTkgQzE1MCw3MCAxNTMsODMgMTU4LDkzIEMxNjMsMTAyIDE3MCwxMDYgMTgwLDEwNiBDMTg1LDEwNiAxOTAsMTA2IDE5NSwxMDYiCiAgICAgICAgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI3LjUiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDwhLS0gVGltZWxpbmUgYmFyIC0tPgogIDxyZWN0IHg9IjE2IiB5PSIxNjYiIHdpZHRoPSIxNjgiIGhlaWdodD0iMTAiIHJ4PSI1IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNCkiLz4KICA8IS0tIFBsYXloZWFkIGFycm93IC0tPgogIDxwb2x5Z29uIHBvaW50cz0iODQsMTU4IDg0LDE4MiAxMDQsMTcwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuOTUpIi8+Cjwvc3ZnPgo=" style="width:96px;height:96px;border-radius:22px;box-shadow:0 8px 32px rgba(53,53,200,.5)"></div>
+    <div class="welcome-title">편곡보드</div>
+    <div class="welcome-sub">음악 편곡 구성을 한눈에 정리하고<br>전체적인 그림을 파악하는 도구</div>
+    <div class="welcome-btns">
+      <button class="wbtn wbtn-p" onclick="newProject()">✨ 새 프로젝트</button>
+      <button class="wbtn wbtn-s" onclick="importFromWelcome()">📂 불러오기</button>
+    </div>
+  </div>
+</div>
+
+<!-- New Project Confirm Dialog -->
+<div class="mov" id="newProjDlg">
+  <div class="mbox">
+    <div class="mt2">📄 새 프로젝트 시작</div>
+    <p style="font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:6px">현재 작업 중인 프로젝트가 있습니다.<br>저장하지 않으면 변경 내용이 사라집니다.</p>
+    <div class="mact">
+      <button class="btn bg" onclick="closeNewProjDlg()">취소</button>
+      <button class="btn bd" onclick="doNewProjDiscard()">🗑️ 저장 안 함</button>
+      <button class="btn bp" onclick="doNewProjSave()">💾 저장 후 새로 시작</button>
+    </div>
+  </div>
+</div>
+
+<!-- Add Section Dialog -->
+<div class="mov" id="addDlg">
+  <div class="mbox">
+    <div class="mt2">새 섹션 추가</div>
+    <div class="fg"><label>섹션 이름</label><input id="aN" placeholder="Intro, Verse, Chorus..." onkeydown="if(event.key==='Enter')doAdd()"></div>
+    <div class="fg"><label>마디 수</label><input id="aB" type="number" value="8"></div>
+    <div class="fg">
+      <label>빠른 선택</label>
+      <div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:4px">
+        <button class="btn bg bsm" onclick="qf('Intro',4)">인트로</button>
+        <button class="btn bg bsm" onclick="qf('Verse 1',8)">버스</button>
+        <button class="btn bg bsm" onclick="qf('Pre-Chorus',4)">프리코러스</button>
+        <button class="btn bg bsm" onclick="qf('Chorus',8)">코러스</button>
+        <button class="btn bg bsm" onclick="qf('Bridge',8)">브릿지</button>
+        <button class="btn bg bsm" onclick="qf('Outro',4)">아웃트로</button>
+        <button class="btn bg bsm" onclick="qf('Solo',8)">솔로</button>
+        <button class="btn bg bsm" onclick="qf('Interlude',4)">인터루드</button>
+      </div>
+    </div>
+    <div class="mact">
+      <button class="btn bg" onclick="closeAddDlg()">취소</button>
+      <button class="btn bp" onclick="doAdd()">추가</button>
+    </div>
+  </div>
+</div>
+
+<!-- Icon Picker -->
+<div class="ipov" id="ipOv">
+  <div class="ipbox">
+    <div class="iphdr"><span class="ipttl">🎵 악기 선택</span><button class="ipx" onclick="closeIP()">✕</button></div>
+    <input class="ipsrc" id="ipSrc" placeholder="악기 검색..." oninput="filterIP(this.value)">
+    <div class="ipscr" id="ipScr"></div>
+  </div>
+</div>
+
+<!-- Meta edit popup -->
+<div class="mpop" id="mPop">
+  <div class="mptt">🎹 곡 정보 변경 <span style="font-size:9px;color:var(--muted);font-weight:400">Enter = 저장</span></div>
+  <div class="mpr"><span class="mpl">조성</span><input class="mpi" id="mpK" placeholder="C maj" onkeydown="if(event.key==='Enter')saveMeta()"></div>
+  <div class="mpr"><span class="mpl">BPM</span><input class="mpi" id="mpB" placeholder="120" onkeydown="if(event.key==='Enter')saveMeta()"></div>
+  <div class="mpr"><span class="mpl">박자</span><input class="mpi" id="mpT" placeholder="4/4" onkeydown="if(event.key==='Enter')saveMeta()"></div>
+  <div class="mpr"><span class="mpl">장르</span><input class="mpi" id="mpG" placeholder="Pop, R&B..." onkeydown="if(event.key==='Enter')saveMeta()"></div>
+  <div class="mpact">
+    <button class="btn bp bsm" onclick="saveMeta()">저장</button>
+    <button class="btn bd bsm" onclick="delMeta()">삭제</button>
+    <button class="btn bg bsm" onclick="closeMPop()">취소</button>
+  </div>
+</div>
+
+<!-- Dashboard Overlay -->
+<div class="dash-ov" id="dashOv">
+  <div class="dash-toolbar">
+    <span class="dash-ttl-bar">📊 대시보드 — <span id="dashSongTitle">편곡 보드</span></span>
+    <button class="btn bg bsm" onclick="printDash()">🖨️ 인쇄 / PDF 저장</button>
+    <button class="btn bg bsm" onclick="closeDash()">✕ 닫기</button>
+  </div>
+  <div id="dashPages"></div>
+</div>
+
+<!-- Hidden input sizer -->
+<span id="sizer" style="position:fixed;top:-9999px;left:-9999px;font-size:12px;font-weight:600;font-family:'Segoe UI',sans-serif;white-space:pre;visibility:hidden;"></span>
+<input type="file" id="fileIn" style="display:none" accept=".json" onchange="loadFile(event)">
+
+<script>
+/* ════════════════════════════════════════════════
+   INSTRUMENT SVG DEFINITIONS
+════════════════════════════════════════════════ */
+const svg=(i)=>`<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">${i}</svg>`;
+const INSTRS=[
+  {id:'acoustic_guitar',name:'어쿠스틱 기타',cat:'현악기 (발현)',s:svg(`<line x1="16" y1="3" x2="16" y2="9"/><line x1="13" y1="3" x2="19" y2="3"/><ellipse cx="16" cy="13" rx="4" ry="3.5"/><path d="M12,13 Q9,14 9,18 Q9,22 12,24 Q14,25 16,25 Q18,25 20,24 Q23,22 23,18 Q23,14 20,13"/><circle cx="16" cy="19" r="2.5"/>`)},
+  {id:'electric_guitar',name:'일렉기타',cat:'현악기 (발현)',s:svg(`<line x1="16" y1="2" x2="16" y2="8"/><line x1="13" y1="2" x2="19" y2="2"/><path d="M10,8 Q8,10 8,14 Q8,19 11,20 L11,27 Q11,29 16,29 Q21,29 21,27 L21,20 Q24,19 24,14 Q24,10 22,8 Z"/><rect x="12" y="15" width="8" height="2" rx="0.8"/><rect x="12" y="20" width="8" height="2" rx="0.8"/>`)},
+  {id:'bass_guitar',name:'베이스 기타',cat:'현악기 (발현)',s:svg(`<line x1="16" y1="2" x2="16" y2="8"/><line x1="13" y1="2" x2="19" y2="2"/><path d="M11,8 Q9,10 9,14 Q9,19 12,20 L12,27 Q12,29 16,29 Q20,29 20,27 L20,20 Q23,19 23,14 Q23,10 21,8 Z"/><rect x="13" y="16" width="6" height="1.5" rx="0.5"/><text x="16" y="27" text-anchor="middle" font-size="8" font-weight="bold" stroke="none" fill="currentColor">B</text>`)},
+  {id:'harp',name:'하프',cat:'현악기 (발현)',s:svg(`<path d="M8,6 Q6,16 8,28"/><path d="M8,6 Q18,2 24,12"/><line x1="8" y1="28" x2="24" y2="12"/><line x1="11" y1="8.5" x2="13.5" y2="25" stroke-width="1"/><line x1="14" y1="6.5" x2="16.5" y2="22" stroke-width="1"/><line x1="17" y1="5.5" x2="19.5" y2="18" stroke-width="1"/><line x1="20" y1="6.5" x2="22" y2="15" stroke-width="1"/>`)},
+  {id:'violin',name:'바이올린',cat:'현악기 (찰현)',s:svg(`<line x1="16" y1="3" x2="16" y2="6"/><line x1="14" y1="3" x2="18" y2="3"/><path d="M16,6 C13,6 11,8 11,11 C11,13 12.5,14 14,15 C12,16 10.5,18 10.5,21 C10.5,25 13,28 16,28 C19,28 21.5,25 21.5,21 C21.5,18 20,16 18,15 C19.5,14 21,13 21,11 C21,8 19,6 16,6Z"/><path d="M13.5,15 Q16,14 18.5,15" stroke-width="1.2"/>`)},
+  {id:'viola',name:'비올라',cat:'현악기 (찰현)',s:svg(`<line x1="16" y1="2" x2="16" y2="5.5"/><line x1="13.5" y1="2" x2="18.5" y2="2"/><path d="M16,5.5 C12.5,5.5 10,8 10,11.5 C10,13.5 11.5,14.8 13.5,15.8 C11,17 9.5,19.5 9.5,22.5 C9.5,27 12.5,29.5 16,29.5 C19.5,29.5 22.5,27 22.5,22.5 C22.5,19.5 21,17 18.5,15.8 C20.5,14.8 22,13.5 22,11.5 C22,8 19.5,5.5 16,5.5Z"/><path d="M13,16 Q16,14.5 19,16" stroke-width="1.2"/>`)},
+  {id:'cello',name:'첼로',cat:'현악기 (찰현)',s:svg(`<line x1="16" y1="2" x2="16" y2="5"/><path d="M16,5 C11,5 8.5,8.5 8.5,12.5 C8.5,15 10,16.5 12.5,18 C9.5,19.5 8,22.5 8,26 C8,30.5 11.5,33 16,33 C20.5,33 24,30.5 24,26 C24,22.5 22.5,19.5 19.5,18 C22,16.5 23.5,15 23.5,12.5 C23.5,8.5 21,5 16,5Z"/><path d="M12.5,18 Q16,16.5 19.5,18" stroke-width="1.2"/>`)},
+  {id:'contrabass',name:'콘트라베이스',cat:'현악기 (찰현)',s:svg(`<line x1="12" y1="2" x2="20" y2="2" stroke-width="2.5"/><line x1="16" y1="2" x2="16" y2="5"/><path d="M16,5 C11,5 8,8 8,12 C8,14.5 9.5,16 12.5,17.5 C9,19 7.5,22 7.5,26 C7.5,30.5 11,33 16,33 C21,33 24.5,30.5 24.5,26 C24.5,22 23,19 19.5,17.5 C22.5,16 24,14.5 24,12 C24,8 21,5 16,5Z"/><path d="M12.5,17.5 Q16,16 19.5,17.5" stroke-width="1.2"/>`)},
+  {id:'keyboard',name:'건반',cat:'건반악기',s:svg(`<rect x="3" y="10" width="26" height="15" rx="2"/><rect x="8" y="10" width="3" height="9" rx="1" fill="currentColor" stroke="none"/><rect x="14" y="10" width="3" height="9" rx="1" fill="currentColor" stroke="none"/><rect x="21" y="10" width="3" height="9" rx="1" fill="currentColor" stroke="none"/><line x1="11" y1="10" x2="11" y2="25"/><line x1="17" y1="10" x2="17" y2="25"/><line x1="23" y1="10" x2="23" y2="25"/>`)},
+  {id:'electric_piano',name:'전자피아노',cat:'건반악기',s:svg(`<rect x="3" y="8" width="26" height="13" rx="2"/><rect x="7.5" y="8" width="2.5" height="8" rx="1" fill="currentColor" stroke="none"/><rect x="13" y="8" width="2.5" height="8" rx="1" fill="currentColor" stroke="none"/><rect x="20" y="8" width="2.5" height="8" rx="1" fill="currentColor" stroke="none"/><rect x="25" y="8" width="2.5" height="8" rx="1" fill="currentColor" stroke="none"/><line x1="10" y1="8" x2="10" y2="21"/><line x1="16" y1="8" x2="16" y2="21"/><line x1="22" y1="8" x2="22" y2="21"/><line x1="9" y1="21" x2="9" y2="26"/><line x1="23" y1="21" x2="23" y2="26"/><line x1="6" y1="26" x2="26" y2="26"/>`)},
+  {id:'drums',name:'드럼',cat:'타악기',s:svg(`<ellipse cx="16" cy="14" rx="10" ry="4.5"/><line x1="6" y1="14" x2="5" y2="26"/><line x1="26" y1="14" x2="27" y2="26"/><path d="M5,26 Q6,30 16,30 Q26,30 27,26"/><ellipse cx="16" cy="14" rx="5.5" ry="2.2"/><line x1="22" y1="7" x2="26" y2="12"/><circle cx="27" cy="6" r="1.8" fill="currentColor" stroke="none"/><line x1="10" y1="7" x2="6" y2="12"/><circle cx="5" cy="6" r="1.8" fill="currentColor" stroke="none"/>`)},
+  {id:'flute',name:'플룻',cat:'목관악기',s:svg(`<rect x="2" y="13" width="28" height="5" rx="2.5"/><ellipse cx="6" cy="15.5" rx="2" ry="2.5" fill="none" stroke-width="1.5"/><circle cx="13" cy="14.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="17" cy="14.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="21" cy="14.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="25" cy="14.5" r="1.2" fill="currentColor" stroke="none"/>`)},
+  {id:'oboe',name:'오보에',cat:'목관악기',s:svg(`<path d="M14.5,5 Q16,2 17.5,5 L18,8 Q19,9 19,11 L19,28 Q19,30 16,30 Q13,30 13,28 L13,11 Q13,9 14,8 Z"/><circle cx="15" cy="14" r="1.2" fill="currentColor" stroke="none"/><circle cx="17" cy="18" r="1.2" fill="currentColor" stroke="none"/><circle cx="15" cy="22" r="1.2" fill="currentColor" stroke="none"/>`)},
+  {id:'clarinet',name:'클라리넷',cat:'목관악기',s:svg(`<rect x="14" y="4" width="4" height="20" rx="2"/><path d="M14,24 Q12,25 12,27 Q12,30 16,30 Q20,30 20,27 Q20,25 18,24"/><line x1="16" y1="4" x2="16" y2="2"/><line x1="14" y1="2" x2="18" y2="2"/><circle cx="15.2" cy="10" r="1.2" fill="currentColor" stroke="none"/><circle cx="16.8" cy="14" r="1.2" fill="currentColor" stroke="none"/><circle cx="15.2" cy="18" r="1.2" fill="currentColor" stroke="none"/>`)},
+  {id:'bassoon',name:'바순',cat:'목관악기',s:svg(`<rect x="10" y="8" width="4" height="20" rx="2"/><rect x="18" y="12" width="4" height="16" rx="2"/><path d="M14,8 Q16,5 18,8 Q20,10 18,12 Q16,14 14,12"/><path d="M14,26 Q16,29 18,28"/><circle cx="11" cy="15" r="1.2" fill="currentColor" stroke="none"/><circle cx="11" cy="19" r="1.2" fill="currentColor" stroke="none"/><circle cx="19" cy="17" r="1.2" fill="currentColor" stroke="none"/>`)},
+  {id:'trumpet',name:'트럼펫',cat:'금관악기',s:svg(`<path d="M4,15 L18,15 Q20,15 20,17 Q20,19 22,19 Q24,19 25,18 Q28,17 28,14 Q28,11 25,10 Q22,9 20,11 Q18,13 18,15"/><rect x="4" y="13" width="2.5" height="4" rx="1.2"/><rect x="8" y="12" width="2.5" height="6" rx="1.2"/><rect x="13" y="12" width="2.5" height="6" rx="1.2"/><path d="M28,14 Q30,14 30,16 Q30,19 27,20 Q24,21 22,19"/>`)},
+  {id:'trombone',name:'트롬본',cat:'금관악기',s:svg(`<line x1="4" y1="11" x2="22" y2="11"/><line x1="4" y1="19" x2="22" y2="19"/><path d="M22,11 Q26,11 26,15 Q26,19 22,19"/><path d="M4,19 Q2,19 2,17 Q2,15 4,15 L4,11"/><rect x="10" y="9" width="4" height="14" rx="0.5" stroke-width="1.2"/><path d="M3,19 Q1,22 3,25 Q5,28 10,28"/><ellipse cx="10.5" cy="28" rx="2" ry="1.5"/>`)},
+  {id:'saxophone',name:'색소폰',cat:'목관악기',s:svg(`<path d="M17,4 Q20,4 21,8 L22,18 Q22,26 15,29 Q8,32 7,25 Q6,20 11,19 L16,19"/><path d="M17,4 Q18,2 20,3"/><circle cx="20" cy="10" r="1.2" fill="currentColor" stroke="none"/><circle cx="20.5" cy="14.5" r="1.2" fill="currentColor" stroke="none"/><ellipse cx="10" cy="25" rx="3" ry="2" fill="none" stroke-width="1.5"/>`)},
+  {id:'tuba',name:'튜바',cat:'금관악기',s:svg(`<path d="M16,4 Q18,4 19,6 L20,10 Q24,12 24,18 Q24,22 20,24 L20,26"/><path d="M16,4 Q14,4 13,6 L12,10 Q8,12 8,18 Q8,22 12,24 L12,26"/><path d="M12,26 Q10,27 8,28 Q6,30 16,30 Q26,30 24,28 Q22,27 20,26"/><rect x="13" y="13" width="3" height="5" rx="1.5"/><rect x="17" y="13" width="3" height="5" rx="1.5"/>`)},
+  {id:'other_wave',name:'기타 (파형)',cat:'기타',s:svg(`<path d="M2,16 Q5,7 8,16 Q11,25 14,16 Q17,7 20,16 Q23,25 26,16 Q28,10 30,16" stroke-width="2.5"/>`)},
+  {id:'other_q',name:'기타 (?)',cat:'기타',s:svg(`<rect x="4" y="4" width="24" height="24" rx="5" stroke-width="2"/><text x="16" y="25" text-anchor="middle" font-size="18" font-weight="bold" stroke="none" fill="currentColor">?</text>`)},
+  {id:'other_globe',name:'기타 (지구본)',cat:'기타',s:svg(`<circle cx="16" cy="16" r="12"/><ellipse cx="16" cy="16" rx="5.5" ry="12"/><line x1="4" y1="16" x2="28" y2="16"/><path d="M6,10 Q16,12 26,10" stroke-width="1.2"/><path d="M6,22 Q16,20 26,22" stroke-width="1.2"/>`)},
+];
+
+/* ════════════════════════════════════════════════
+   CONSTANTS
+════════════════════════════════════════════════ */
+const COLORS=['#7c6ff7','#a855f7','#ec4899','#f97316','#eab308','#22c55e','#06b6d4','#3b82f6','#ef4444','#14b8a6'];
+// Cell width per view mode
+const CW={bar:88,beat:54,eighth:36};
+// Cells per bar per view mode
+const DC={bar:1,beat:4,eighth:8};
+
+/* ════════════════════════════════════════════════
+   STATE
+════════════════════════════════════════════════ */
+let G={
+  secs:[],       // all sections
+  vm:'section',  // viewMode: 'section'|'bar'|'beat'|'eighth'
+  expIdx:null,   // expanded detail section index
+  edIdx:null,    // editor section index
+  edOpen:false,  // editor panel open
+  ipTgt:null,    // icon picker target {si,ii}
+  mpTgt:null,    // meta popup target section index
+  songMetas:[{key:'',bpm:'',time:''}],  // global key/bpm/time sets (multi)
+};
+
+/* ════════════════════════════════════════════════
+   CHORD GRID DATA
+════════════════════════════════════════════════ */
+function ensureCG(sec){
+  if(!sec.cg) sec.cg={div:1,cells:[]};
+  const bars=parseInt(sec.bars)||0, d=sec.cg.div;
+  while(sec.cg.cells.length<bars) sec.cg.cells.push(Array(d).fill(''));
+  sec.cg.cells.length=bars;
+  sec.cg.cells=sec.cg.cells.map(r=>{const c=r.slice(0,d);while(c.length<d)c.push('');return c;});
+}
+
+function migrateSec(sec){
+  if(sec.chords&&!sec.cg){
+    const bars=parseInt(sec.bars)||4;
+    sec.cg={div:1,cells:Array.from({length:bars},(_,i)=>[sec.chords[i]||''])};
+  }
+  if(sec.chordGrid&&!sec.cg){
+    sec.cg=sec.chordGrid;
+    // rename division → div
+    if(sec.cg.division&&!sec.cg.div){sec.cg.div=sec.cg.division;delete sec.cg.division;}
+  }
+  ensureCG(sec);
+}
+
+function changeCGDiv(si,newDiv){
+  const sec=G.secs[si]; if(!sec) return;
+  const old=sec.cg;
+  sec.cg.cells=old.cells.map(row=>{
+    if(newDiv===1) return[row[0]||''];
+    if(newDiv===4){
+      if(old.div===1) return[row[0]||'','','',''];
+      if(old.div===8) return[row[0]||'',row[2]||'',row[4]||'',row[6]||''];
+      return row.slice(0,4).concat(Array(Math.max(0,4-row.length)).fill(''));
+    }
+    if(newDiv===8){
+      if(old.div===1) return[row[0]||'','','','','','','',''];
+      if(old.div===4){const r=[];row.forEach(c=>r.push(c||'',''));return r.slice(0,8);}
+      return row.slice(0,8).concat(Array(Math.max(0,8-row.length)).fill(''));
+    }
+    return row;
+  });
+  sec.cg.div=newDiv;
+  ensureCG(sec);
+}
+
+// Get chord to display for a given (bar, cell) in the timeline's view mode
+function cgGetForVM(sec,bar,cell,vmDiv){
+  const cg=sec.cg; if(!cg||!cg.cells[bar]) return'';
+  const row=cg.cells[bar];
+  if(vmDiv===1) return row[0]||'';
+  if(vmDiv===4){
+    if(cg.div===1) return cell===0?(row[0]||''):'';
+    if(cg.div===4) return row[cell]||'';
+    if(cg.div===8) return row[cell*2]||'';
+  }
+  if(vmDiv===8){
+    if(cg.div===1) return cell===0?(row[0]||''):'';
+    if(cg.div===4) return cell%2===0?(row[cell/2]||''):'';
+    if(cg.div===8) return row[cell]||'';
+  }
+  return'';
+}
+
+// Get the separator CSS class for a cell within a bar
+function sepClass(cellIdx,div){
+  if(cellIdx===0) return''; // bar line handled by parent border
+  if(div===8) return cellIdx%2===0?'bs8q':'bs8e'; // even=quarter boundary, odd=eighth
+  if(div===4) return'bs4';
+  return'';
+}
+
+/* ════════════════════════════════════════════════
+   CHORD GRID HTML
+════════════════════════════════════════════════ */
+function cgHTML(sec,editable){
+  ensureCG(sec);
+  const {div,cells}=sec.cg;
+  const bars=parseInt(sec.bars)||0;
+  if(!bars) return'<div class="empty" style="height:50px">마디 없음</div>';
+
+  // Compute display width for a chord string
+  const cellW=(chord)=>{
+    const sizer=document.getElementById('sizer');
+    sizer.textContent=chord||'Am7';
+    return Math.max(62,sizer.offsetWidth+14);
+  };
+
+  let h='<div class="cg-wrap"><div class="cg-inner"><div class="cg-rows">';
+  for(let b=0;b<bars;b++){
+    const row=cells[b]||Array(div).fill('');
+    // Compute bar label width = sum of all cell widths in this bar
+    h+=`<div class="cg-bg">`;
+    h+=`<div class="cg-blbl">${b+1}마디</div>`;
+    h+=`<div class="cg-cells">`;
+    for(let c=0;c<div;c++){
+      const chord=row[c]||'';
+      const w=cellW(chord);
+      const sc=sepClass(c,div);
+      if(editable){
+        h+=`<div class="cg-cw${sc?' '+sc:''}" style="flex-shrink:0">
+          <input class="cg-inp" value="${esc(chord)}" style="width:${w}px"
+            data-bar="${b}" data-cell="${c}"
+            oninput="onCI(this,${b},${c})"
+            onkeydown="onCK(event,${b},${c},${div})"
+            onfocus="this.select()">
+        </div>`;
+      } else {
+        h+=`<div class="cg-cw${sc?' '+sc:''}" style="flex-shrink:0">
+          <div class="cg-dp${!chord?' em':''}" style="width:${w}px">${chord||'–'}</div>
+        </div>`;
+      }
+    }
+    h+=`</div></div>`;
+  }
+  h+='</div></div></div>';
+  return h;
+}
+
+function onCI(inp,bar,cell){
+  const si=G.edIdx; if(si===null) return;
+  const sec=G.secs[si]; ensureCG(sec);
+  if(!sec.cg.cells[bar]) sec.cg.cells[bar]=Array(sec.cg.div).fill('');
+  sec.cg.cells[bar][cell]=inp.value;
+  // Auto-resize
+  const sizer=document.getElementById('sizer');
+  sizer.textContent=inp.value||'Am7';
+  inp.style.width=Math.max(62,sizer.offsetWidth+14)+'px';
+  save();
+}
+
+function onCK(e,bar,cell,div){
+  if(e.key==='Tab'){
+    e.preventDefault();
+    const next=document.querySelector(`#edBody input[data-bar="${bar+1}"][data-cell="0"]`);
+    if(next) next.focus();
+    return;
+  }
+  if(e.key==='ArrowRight'){
+    e.preventDefault();
+    let nb=bar,nc=cell+1;
+    if(nc>=div){nc=0;nb=bar+1;}
+    const next=document.querySelector(`#edBody input[data-bar="${nb}"][data-cell="${nc}"]`);
+    if(next) next.focus();
+    return;
+  }
+  if(e.key==='ArrowLeft'){
+    e.preventDefault();
+    let nb=bar,nc=cell-1;
+    if(nc<0){nb=bar-1;nc=div-1;}
+    const next=document.querySelector(`#edBody input[data-bar="${nb}"][data-cell="${nc}"]`);
+    if(next) next.focus();
+  }
+}
+
+/* ════════════════════════════════════════════════
+   SIDEBAR
+════════════════════════════════════════════════ */
+function renderSB(){
+  const list=document.getElementById('sbList');
+  document.getElementById('sbCnt').textContent=G.secs.length;
+  if(!G.secs.length){
+    list.innerHTML='<div class="empty">섹션을 추가하세요</div>';return;
+  }
+  list.innerHTML='';
+  G.secs.forEach((sec,si)=>{
+    const el=document.createElement('div');
+    el.className='si'+(si===G.edIdx?' act':'');
+    el.draggable=true; el.dataset.si=si;
+    el.innerHTML=`<div class="si-dot" style="background:${sec.color}"></div>
+      <div class="si-nm">${sec.name}</div>
+      <div class="si-bars">${sec.bars||0}마디</div>
+      <div class="dh">⠿</div>`;
+    el.addEventListener('click',()=>{G.edIdx=si;renderAll();});
+    el.addEventListener('dragstart',sbDS);el.addEventListener('dragover',sbDO);
+    el.addEventListener('drop',sbDrp);el.addEventListener('dragend',sbDE);
+    list.appendChild(el);
+  });
+}
+let sbSrc=null;
+function sbDS(e){sbSrc=+e.currentTarget.dataset.si;e.currentTarget.classList.add('faded');}
+function sbDO(e){e.preventDefault();}
+function sbDrp(e){
+  e.preventDefault();
+  const to=+e.currentTarget.dataset.si;
+  if(sbSrc===null||sbSrc===to)return;
+  const m=G.secs.splice(sbSrc,1)[0];G.secs.splice(to,0,m);
+  reIdx(sbSrc,to);renderAll();
+}
+function sbDE(e){e.currentTarget.classList.remove('faded');sbSrc=null;}
+function reIdx(from,to){
+  ['expIdx','edIdx'].forEach(k=>{
+    if(G[k]===from)G[k]=to;
+    else if(G[k]>from&&G[k]<=to)G[k]--;
+    else if(G[k]<from&&G[k]>=to)G[k]++;
+  });
+}
+
+/* ════════════════════════════════════════════════
+   TIMELINE
+════════════════════════════════════════════════ */
+function renderTL(){
+  const rows=document.getElementById('tlRows');
+  rows.innerHTML='';
+  // Section mode: fill container width (no horizontal scroll needed)
+  // Grid mode: expand to content width (horizontal scroll)
+  rows.className='tl-rows '+(G.vm==='section'?'sm':'gm');
+
+  // Meta row
+  rows.appendChild(buildMeta());
+
+  // Section rows
+  if(G.vm==='section'){
+    rows.appendChild(buildSecRow());
+  } else {
+    rows.appendChild(buildGridRow());
+  }
+
+  // Expanded detail (full-width, outside scroll)
+  const expArea=document.getElementById('expArea');
+  if(G.expIdx!==null&&G.secs[G.expIdx]){
+    expArea.innerHTML='';
+    expArea.appendChild(buildExpCard(G.expIdx));
+  } else {
+    expArea.innerHTML='';
+  }
+}
+
+/* META ROW */
+function buildMeta(){
+  const row=document.createElement('div');row.className='meta-row';
+  const gm=G.songMetas[0]||{};
+  const gKey=gm.key||'',gBpm=gm.bpm||'',gTime=gm.time||'',gGenre=gi('gGenre')||'';
+
+  if(!G.secs.length){
+    const seg=document.createElement('div');seg.className='ms';seg.style.flex='1';
+    const parts=[];
+    if(gKey) parts.push(`<span class="mk">${gKey}</span>`);
+    if(gBpm) parts.push(`<span class="mb">${gBpm} BPM</span>`);
+    if(gTime) parts.push(`<span class="mts">${gTime}</span>`);
+    if(gGenre) parts.push(`<span style="color:var(--muted);font-size:9px">${gGenre}</span>`);
+    seg.innerHTML=parts.join('')||'<span style="color:var(--muted);font-size:10px">곡 정보를 입력하세요</span>';
+    row.appendChild(seg);return row;
+  }
+
+  const total=G.secs.reduce((s,sec)=>s+(parseInt(sec.bars)||0),0)||1;
+  let prev={key:gKey,bpm:gBpm,time:gTime,genre:gGenre};
+
+  G.secs.forEach((sec,si)=>{
+    const bars=parseInt(sec.bars)||1;
+    const seg=document.createElement('div');seg.className='ms';
+    if(G.vm==='section'){seg.style.flex=String(bars/total);}
+    else{const cw=CW[G.vm]||88,dc=DC[G.vm]||1;seg.style.width=(bars*dc*cw)+'px';seg.style.flexShrink='0';}
+    const mo=sec.meta||{};
+    const curr={key:mo.key||prev.key,bpm:mo.bpm||prev.bpm,time:mo.time||prev.time,genre:mo.genre||prev.genre};
+    const parts=[];
+    if(si===0){
+      // 첫 섹션: 모든 값 표시
+      if(curr.key) parts.push(`<span class="mk">${curr.key}</span>`);
+      if(curr.bpm) parts.push(`<span class="mb">${curr.bpm} BPM</span>`);
+      if(curr.time) parts.push(`<span class="mts">${curr.time}</span>`);
+      if(curr.genre) parts.push(`<span style="color:var(--muted);font-size:9px">${curr.genre}</span>`);
+    } else {
+      // 이후 섹션: 변경된 값만 화살표와 함께 표시
+      if(curr.key!==prev.key) parts.push(`<span class="mk">→${curr.key}</span>`);
+      if(curr.bpm!==prev.bpm) parts.push(`<span class="mb">→${curr.bpm} BPM</span>`);
+      if(curr.time!==prev.time) parts.push(`<span class="mts">→${curr.time}</span>`);
+      if(curr.genre!==prev.genre) parts.push(`<span style="color:var(--muted);font-size:9px">→${curr.genre}</span>`);
+    }
+    const hasO=!!(mo.key||mo.bpm||mo.time);
+    seg.innerHTML=`${hasO?'<span class="mcd"></span>':''}${parts.join('')}`;
+    seg.title='더블클릭: 이 위치의 조성/BPM/박자 편집';
+    seg.addEventListener('dblclick',ev=>{openMPop(si,ev);ev.stopPropagation();});
+    row.appendChild(seg);
+    prev=curr;
+  });
+  return row;
+}
+
+/* SECTION MODE: horizontal proportional blocks */
+function buildSecRow(){
+  const wrap=document.createElement('div');wrap.className='sb-row';
+  const total=G.secs.reduce((s,sec)=>s+(parseInt(sec.bars)||0),0)||1;
+  if(!G.secs.length){wrap.innerHTML='<div class="empty">섹션을 추가하면 여기에 표시됩니다</div>';return wrap;}
+  G.secs.forEach((sec,si)=>{
+    const bars=parseInt(sec.bars)||1;
+    const blk=document.createElement('div');
+    blk.className='tl-blk'+(si===G.expIdx?' sel':'');
+    blk.style.cssText=`background:${sec.color};flex:${bars/total}`;
+    blk.dataset.si=si;blk.draggable=true;
+    blk.innerHTML=`<div class="tbn">${sec.name}</div><div class="tbb">${bars}마디${sec.repeat>1?' ×'+sec.repeat:''}</div>`;
+    // single click = expand detail, double click = open editor
+    let ct=null;
+    blk.addEventListener('click',()=>{
+      clearTimeout(ct);
+      ct=setTimeout(()=>{G.expIdx=(G.expIdx===si)?null:si;renderTL();},220);
+    });
+    blk.addEventListener('dblclick',()=>{clearTimeout(ct);openEd(si);});
+    blk.addEventListener('dragstart',tlDS);blk.addEventListener('dragover',tlDO);
+    blk.addEventListener('drop',tlDrp);blk.addEventListener('dragend',tlDE);
+    wrap.appendChild(blk);
+  });
+  return wrap;
+}
+
+/* GRID MODE: bar/beat/eighth with fixed-width columns */
+function buildGridRow(){
+  const wrap=document.createElement('div');wrap.className='gm-area';
+  if(!G.secs.length){wrap.innerHTML='<div class="empty">섹션을 추가하세요</div>';return wrap;}
+  const cw=CW[G.vm],dc=DC[G.vm];
+
+  // Section headers
+  const hdrs=document.createElement('div');hdrs.className='gm-hdrs';
+  G.secs.forEach((sec,si)=>{
+    const bars=parseInt(sec.bars)||1;
+    const h=document.createElement('div');
+    h.className='gm-hdr'+(si===G.expIdx?' sel':'');
+    h.style.cssText=`background:${sec.color};width:${bars*dc*cw}px`;
+    h.textContent=`${sec.name} (${bars}마디)`;
+    h.dataset.si=si;h.draggable=true;
+    let ct=null;
+    h.addEventListener('click',()=>{clearTimeout(ct);ct=setTimeout(()=>{G.expIdx=(G.expIdx===si)?null:si;renderTL();},220);});
+    h.addEventListener('dblclick',()=>{clearTimeout(ct);openEd(si);});
+    h.addEventListener('dragstart',tlDS);h.addEventListener('dragover',tlDO);
+    h.addEventListener('drop',tlDrp);h.addEventListener('dragend',tlDE);
+    hdrs.appendChild(h);
+  });
+  wrap.appendChild(hdrs);
+
+  // Bar numbers
+  const bns=document.createElement('div');bns.className='gm-barnums';
+  G.secs.forEach(sec=>{
+    for(let b=0;b<(parseInt(sec.bars)||1);b++){
+      const bn=document.createElement('div');bn.className='gm-bn';
+      bn.style.width=(dc*cw)+'px';bn.textContent=b+1;
+      bns.appendChild(bn);
+    }
+  });
+  wrap.appendChild(bns);
+
+  // Chord strip
+  const strip=document.createElement('div');strip.className='gm-strip';
+  G.secs.forEach(sec=>{
+    ensureCG(sec);
+    for(let b=0;b<(parseInt(sec.bars)||1);b++){
+      const grp=document.createElement('div');grp.className='gm-bgrp';
+      for(let c=0;c<dc;c++){
+        const cell=document.createElement('div');
+        cell.className='gm-cell';
+        if(c===0) cell.classList.add('bar-start');
+        else if(dc===8) cell.classList.add(c%2===0?'bd4':'bd8');
+        else cell.classList.add('bd4');
+        cell.style.width=cw+'px';
+        const ch=cgGetForVM(sec,b,c,dc);
+        cell.textContent=ch||'';
+        if(!ch) cell.classList.add('mt');
+        grp.appendChild(cell);
+      }
+      strip.appendChild(grp);
+    }
+  });
+  wrap.appendChild(strip);
+  return wrap;
+}
+
+/* TIMELINE DRAG & DROP */
+let tlSrc=null;
+function tlDS(e){tlSrc=+e.currentTarget.dataset.si;e.currentTarget.classList.add('faded');}
+function tlDO(e){
+  e.preventDefault();
+  document.querySelectorAll('.tl-blk,.gm-hdr').forEach(el=>el.classList.remove('dl','dr'));
+  const r=e.currentTarget.getBoundingClientRect();
+  e.currentTarget.classList.add(e.clientX<r.left+r.width/2?'dl':'dr');
+}
+function tlDrp(e){
+  e.preventDefault();
+  const to=+e.currentTarget.dataset.si;
+  const isRight=e.currentTarget.classList.contains('dr');
+  document.querySelectorAll('.tl-blk,.gm-hdr').forEach(el=>el.classList.remove('dl','dr'));
+  if(tlSrc===null||tlSrc===to)return;
+  const m=G.secs.splice(tlSrc,1)[0];
+  let dest=to>tlSrc?to-1:to;
+  if(isRight)dest++;
+  dest=Math.max(0,Math.min(dest,G.secs.length));
+  G.secs.splice(dest,0,m);
+  reIdx(tlSrc,dest);renderAll();
+}
+function tlDE(e){e.currentTarget.classList.remove('faded');document.querySelectorAll('.tl-blk,.gm-hdr').forEach(el=>el.classList.remove('dl','dr'));tlSrc=null;}
+
+/* ════════════════════════════════════════════════
+   EXPANDED DETAIL
+════════════════════════════════════════════════ */
+function buildExpCard(si){
+  const sec=G.secs[si];ensureCG(sec);
+  const card=document.createElement('div');card.className='exp-card';
+
+  const instrs=(sec.instruments||[]).map(instr=>{
+    const def=INSTRS.find(d=>d.id===instr.instrId)||INSTRS[INSTRS.length-2];
+    return`<div class="exp-instr">${def.s}<div><div class="ei-nm">${instr.name||def.name}</div>${instr.detail?`<div class="ei-dt">${instr.detail}</div>`:''}</div></div>`;
+  }).join('')||'<div class="empty" style="height:40px">악기 없음</div>';
+
+  const divLabel=['마디','4분할','8분할'][[1,4,8].indexOf(sec.cg.div)];
+
+  card.innerHTML=`
+    <div class="exp-hdr">
+      <div class="exp-stripe" style="background:${sec.color}"></div>
+      <div style="flex:1">
+        <div class="exp-ttl">${sec.name}</div>
+        <div class="exp-sub">${sec.bars||0}마디${sec.repeat>1?' · '+sec.repeat+'회 반복':''}</div>
+      </div>
+      <button class="btn bg bsm" onclick="openEd(${si})" style="margin-right:5px">✏️ 편집</button>
+      <button class="btn-x" onclick="G.expIdx=null;renderTL()">✕</button>
+    </div>
+    <div class="exp-body">
+      <div>
+        <div class="elbl">악기 레이어</div>
+        <div class="exp-instrs">${instrs}</div>
+      </div>
+      <div>
+        <div class="elbl">메모</div>
+        <div class="exp-memo">${esc(sec.memo||'')||'<span style="color:var(--muted);font-style:italic">메모 없음</span>'}</div>
+      </div>
+      <div class="exp-full">
+        <div class="elbl">코드 진행 (${divLabel})</div>
+        ${cgHTML(sec,false)}
+      </div>
+    </div>`;
+  return card;
+}
+
+/* ════════════════════════════════════════════════
+   EDITOR PANEL
+════════════════════════════════════════════════ */
+function openEd(si){
+  G.edIdx=si;G.edOpen=true;renderAll();
+}
+function toggleEd(){
+  G.edOpen=!G.edOpen;renderEd();
+}
+function renderEd(){
+  const panel=document.getElementById('edPanel');
+  const tog=document.getElementById('edTog');
+  const nm=document.getElementById('edSName');
+  nm.textContent=(G.edIdx!==null&&G.secs[G.edIdx])?G.secs[G.edIdx].name:'–';
+  panel.classList.toggle('open',G.edOpen);
+  tog.textContent=G.edOpen?'▼ 닫기':'▲ 열기';
+  const body=document.getElementById('edBody');
+  if(!G.edOpen){body.innerHTML='';return;}
+  if(G.edIdx===null||!G.secs[G.edIdx]){
+    body.innerHTML='<div class="ef"><div class="empty">섹션을 더블클릭하여 편집하세요</div></div>';return;
+  }
+  const si=G.edIdx,sec=G.secs[si];ensureCG(sec);
+  const d=sec.cg.div;
+
+  body.innerHTML=`
+    <!-- Section header -->
+    <div class="ef">
+      <div class="ed-shdr">
+        <div class="ed-cdot" style="background:${sec.color}"></div>
+        <input class="ed-tti" value="${esc(sec.name)}" placeholder="섹션 이름"
+          oninput="G.secs[${si}].name=this.value;document.getElementById('edSName').textContent=this.value;renderSB();renderTL();save();">
+        <div style="display:flex;gap:4px">
+          <button class="btn bg bsm" onclick="dupSec(${si})">복제</button>
+          <button class="btn bd bsm" onclick="delSec(${si})">삭제</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left: basic info + color -->
+    <div>
+      <div class="ec">
+        <div class="ect">기본 정보</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:9px">
+          <div><div style="font-size:9px;color:var(--muted);margin-bottom:3px">마디 수</div>
+            <input class="ef2" type="number" value="${sec.bars||''}" placeholder="8"
+              oninput="G.secs[${si}].bars=this.value;ensureCG(G.secs[${si}]);renderTL();save();">
+          </div>
+          <div><div style="font-size:9px;color:var(--muted);margin-bottom:3px">반복</div>
+            <input class="ef2" type="number" value="${sec.repeat||1}"
+              oninput="G.secs[${si}].repeat=parseInt(this.value)||1;renderTL();save();">
+          </div>
+        </div>
+        <div style="font-size:9px;color:var(--muted);margin-bottom:5px">섹션 색상</div>
+        <div class="cs-row">${COLORS.map(c=>`<div class="csw${c===sec.color?' on':''}" style="background:${c}"
+          onclick="G.secs[${si}].color='${c}';renderAll();save()"></div>`).join('')}</div>
+      </div>
+    </div>
+
+    <!-- Right: instruments -->
+    <div>
+      <div class="ec">
+        <div class="ect">악기 레이어 <button class="btn bg bsm" onclick="addInstr(${si})">+ 추가</button></div>
+        <div class="il" id="ilList">
+          ${(sec.instruments||[]).map((instr,ii)=>{
+            const def=INSTRS.find(d=>d.id===instr.instrId)||INSTRS[INSTRS.length-2];
+            return`<div class="ir">
+              <button class="iib" onclick="openIP(${si},${ii})">${def.s}</button>
+              <input class="ini" value="${esc(instr.name||'')}" placeholder="악기명"
+                oninput="G.secs[${si}].instruments[${ii}].name=this.value;save();">
+              <input class="idi" value="${esc(instr.detail||'')}" placeholder="세부사항..."
+                oninput="G.secs[${si}].instruments[${ii}].detail=this.value;save();">
+              <button class="rmb" onclick="delInstr(${si},${ii})">✕</button>
+            </div>`;
+          }).join('')||'<div class="empty" style="height:40px">악기 없음</div>'}
+        </div>
+      </div>
+    </div>
+
+    <!-- Chord grid -->
+    <div class="ef">
+      <div class="ec">
+        <div class="ect">코드 진행</div>
+        <div class="cg-mode">
+          <button class="cgm-btn${d===1?' on':''}" onclick="changeCGDiv(${si},1);renderEd();save()">마디</button>
+          <button class="cgm-btn${d===4?' on':''}" onclick="changeCGDiv(${si},4);renderEd();save()">4분할</button>
+          <button class="cgm-btn${d===8?' on':''}" onclick="changeCGDiv(${si},8);renderEd();save()">8분할</button>
+          <span style="font-size:9px;color:var(--muted);margin-left:6px">Tab = 다음 마디로</span>
+        </div>
+        ${cgHTML(sec,true)}
+      </div>
+    </div>
+
+    <!-- Memo -->
+    <div class="ef">
+      <div class="ec">
+        <div class="ect">메모 / 편곡 아이디어</div>
+        <textarea class="ef2 memo2" rows="4" placeholder="편곡 아이디어, 참고사항..."
+          oninput="G.secs[${si}].memo=this.value;save();">${esc(sec.memo||'')}</textarea>
+      </div>
+    </div>`;
+}
+
+/* ════════════════════════════════════════════════
+   ICON PICKER
+════════════════════════════════════════════════ */
+function buildIPHtml(defs){
+  const cats={};defs.forEach(d=>{if(!cats[d.cat])cats[d.cat]=[];cats[d.cat].push(d);});
+  let h='';
+  for(const cat in cats){
+    h+=`<div class="ipcat">${cat}</div><div class="ipgrid">`;
+    cats[cat].forEach(d=>{
+      h+=`<div class="ipopt" data-id="${d.id}" onclick="pickIP('${d.id}')">${d.s}<div class="ipnm">${d.name}</div></div>`;
+    });
+    h+='</div>';
+  }
+  return h;
+}
+function openIP(si,ii){
+  G.ipTgt={si,ii};
+  document.getElementById('ipSrc').value='';
+  document.getElementById('ipScr').innerHTML=buildIPHtml(INSTRS);
+  const cur=G.secs[si].instruments[ii]?.instrId;
+  if(cur) document.querySelectorAll('.ipopt').forEach(el=>el.classList.toggle('on',el.dataset.id===cur));
+  document.getElementById('ipOv').classList.add('on');
+  setTimeout(()=>document.getElementById('ipSrc').focus(),80);
+}
+function closeIP(){document.getElementById('ipOv').classList.remove('on');}
+function filterIP(q){
+  const scr=document.getElementById('ipScr');
+  if(!q.trim()){scr.innerHTML=buildIPHtml(INSTRS);return;}
+  const f=INSTRS.filter(d=>d.name.includes(q)||d.cat.includes(q));
+  scr.innerHTML=f.length?`<div class="ipgrid">${f.map(d=>`<div class="ipopt" onclick="pickIP('${d.id}')">${d.s}<div class="ipnm">${d.name}</div></div>`).join('')}</div>`:'<div class="empty">검색 결과 없음</div>';
+}
+function pickIP(id){
+  if(!G.ipTgt)return;
+  const {si,ii}=G.ipTgt;const def=INSTRS.find(d=>d.id===id);
+  const instr=G.secs[si].instruments[ii];
+  instr.instrId=id;
+  if(!instr.name||INSTRS.some(d=>d.name===instr.name))instr.name=def.name;
+  closeIP();renderEd();save();
+}
+
+/* ════════════════════════════════════════════════
+   META POPUP
+════════════════════════════════════════════════ */
+function openMPop(si,ev){
+  G.mpTgt=si;const m=G.secs[si].meta||{};
+  document.getElementById('mpK').value=m.key||'';
+  document.getElementById('mpB').value=m.bpm||'';
+  document.getElementById('mpT').value=m.time||'';
+  document.getElementById('mpG').value=m.genre||'';
+  const p=document.getElementById('mPop');p.classList.add('on');
+  p.style.left=Math.min(ev.clientX,window.innerWidth-240)+'px';
+  p.style.top=Math.min(ev.clientY+8,window.innerHeight-225)+'px';
+  setTimeout(()=>document.getElementById('mpK').focus(),60);
+}
+function saveMeta(){
+  if(G.mpTgt===null)return;
+  const sec=G.secs[G.mpTgt];
+  const k=document.getElementById('mpK').value.trim();
+  const b=document.getElementById('mpB').value.trim();
+  const t=document.getElementById('mpT').value.trim();
+  const g=document.getElementById('mpG').value.trim();
+  if(k||b||t||g)sec.meta={key:k,bpm:b,time:t,genre:g};else delete sec.meta;
+  closeMPop();renderTL();save();
+}
+function delMeta(){if(G.mpTgt!==null)delete G.secs[G.mpTgt].meta;closeMPop();renderTL();save();}
+function closeMPop(){document.getElementById('mPop').classList.remove('on');G.mpTgt=null;}
+
+/* ════════════════════════════════════════════════
+   SECTION ACTIONS
+════════════════════════════════════════════════ */
+function openAddDlg(){
+  document.getElementById('aN').value='';document.getElementById('aB').value=8;
+  document.getElementById('addDlg').classList.add('on');
+  setTimeout(()=>document.getElementById('aN').focus(),80);
+}
+function closeAddDlg(){document.getElementById('addDlg').classList.remove('on');}
+function qf(n,b){document.getElementById('aN').value=n;document.getElementById('aB').value=b;}
+function doAdd(){
+  const name=document.getElementById('aN').value.trim()||'새 섹션';
+  const bars=parseInt(document.getElementById('aB').value)||8;
+  const sec={
+    id:Date.now(),name,bars,repeat:1,
+    color:COLORS[G.secs.length%COLORS.length],
+    instruments:[],memo:'',
+    cg:{div:1,cells:Array.from({length:bars},()=>[''])}
+  };
+  G.secs.push(sec);G.edIdx=G.secs.length-1;
+  closeAddDlg();renderAll();
+}
+function delSec(si){
+  if(!confirm(`"${G.secs[si].name}" 섹션을 삭제할까요?`))return;
+  G.secs.splice(si,1);
+  if(G.edIdx>=G.secs.length)G.edIdx=G.secs.length?G.secs.length-1:null;
+  if(G.expIdx!==null&&G.expIdx>=G.secs.length)G.expIdx=null;
+  renderAll();save();
+}
+function dupSec(si){
+  const copy=JSON.parse(JSON.stringify(G.secs[si]));
+  copy.id=Date.now();copy.name+=' (복사)';
+  G.secs.splice(si+1,0,copy);G.edIdx=si+1;
+  renderAll();save();
+}
+function addInstr(si){
+  const sec=G.secs[si];if(!sec.instruments)sec.instruments=[];
+  sec.instruments.push({instrId:'acoustic_guitar',name:'어쿠스틱 기타',detail:''});
+  const ii=sec.instruments.length-1;
+  renderEd();openIP(si,ii);
+}
+function delInstr(si,ii){
+  G.secs[si].instruments.splice(ii,1);renderEd();save();
+}
+
+/* ════════════════════════════════════════════════
+   SONG METAS (header multi-entry)
+════════════════════════════════════════════════ */
+function renderSongMetas(){
+  const wrap=document.getElementById('songMetasWrap');
+  if(!wrap)return;
+  let h='';
+  G.songMetas.forEach((m,i)=>{
+    if(i>0) h+='<span class="meta-arrow-lbl">→</span>';
+    h+=`<div class="meta-set">
+      <div class="mg"><div class="ml">조성</div><input class="mi s" value="${esc(m.key||'')}" placeholder="C maj"
+        oninput="G.songMetas[${i}].key=this.value;renderTL();save();" style="width:68px"></div>
+      <div class="mg"><div class="ml">BPM</div><input class="mi s" value="${esc(m.bpm||'')}" placeholder="120"
+        oninput="G.songMetas[${i}].bpm=this.value;renderTL();save();" style="width:52px"></div>
+      <div class="mg"><div class="ml">박자</div><input class="mi s" value="${esc(m.time||'')}" placeholder="4/4"
+        oninput="G.songMetas[${i}].time=this.value;renderTL();save();" style="width:50px"></div>
+      ${i>0?`<button class="btn bd bsm" style="align-self:flex-end;margin-bottom:1px;margin-left:2px" onclick="removeSongMeta(${i})">✕</button>`:''}
+    </div>`;
+  });
+  h+='<button class="meta-add-btn" onclick="addSongMeta()" title="변화 지점 추가">＋</button>';
+  wrap.innerHTML=h;
+}
+function addSongMeta(){
+  const last=G.songMetas[G.songMetas.length-1]||{};
+  G.songMetas.push({key:last.key||'',bpm:last.bpm||'',time:last.time||''});
+  renderSongMetas();save();
+}
+function removeSongMeta(i){
+  if(G.songMetas.length<=1)return;
+  G.songMetas.splice(i,1);
+  renderSongMetas();renderTL();save();
+}
+
+/* ════════════════════════════════════════════════
+   DASHBOARD
+════════════════════════════════════════════════ */
+function openDash(){
+  const title=gi('gTitle')||'제목 없음';
+  document.getElementById('dashSongTitle').textContent=title;
+  const pages=document.getElementById('dashPages');
+  pages.innerHTML='';
+  // Page 1: Macro
+  pages.appendChild(buildMacroPage());
+  // Pages 2+: Micro (3 sections per page)
+  const PER=3;
+  for(let i=0;i<G.secs.length;i+=PER){
+    pages.appendChild(buildMicroPage(G.secs.slice(i,i+PER),i));
+  }
+  document.getElementById('dashOv').classList.add('on');
+}
+function closeDash(){document.getElementById('dashOv').classList.remove('on');}
+function printDash(){
+  const pages=document.getElementById('dashPages').innerHTML;
+  const win=window.open('','_blank','width=1200,height=900');
+  win.document.write(`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>편곡 대시보드</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:#f0f0f0;font-family:'Segoe UI',sans-serif;padding:20px;}
+    ${Array.from(document.styleSheets).map(s=>{try{return Array.from(s.cssRules).map(r=>r.cssText).join('');}catch(e){return '';}}).join('')}
+    @media print{body{background:#fff;padding:0;}.dash-page{box-shadow:none;margin-bottom:0;page-break-after:always;}}
+  </style></head><body>${pages}
+
+</body></html>`);
+  win.document.close();
+  setTimeout(()=>win.print(),600);
+}
+
+function buildMacroPage(){
+  const page=document.createElement('div');page.className='dash-page';
+  const title=gi('gTitle')||'제목 없음';
+  const genre=gi('gGenre')||'';
+  const total=G.secs.reduce((s,sec)=>s+(parseInt(sec.bars)||0),0)||1;
+
+  // Header: song info
+  let metaChips='';
+  G.songMetas.forEach((m,i)=>{
+    if(i>0) metaChips+='<span class="dash-chip-arr">→</span>';
+    if(m.key) metaChips+=`<span class="dash-chip">${m.key}</span>`;
+    if(m.bpm) metaChips+=`<span class="dash-chip dash-chip-bpm">${m.bpm} BPM</span>`;
+    if(m.time) metaChips+=`<span class="dash-chip dash-chip-time">${m.time}</span>`;
+  });
+  if(genre) metaChips+=`<span class="dash-chip dash-chip-genre">${genre}</span>`;
+
+  // Visual timeline blocks
+  let tlHTML='';
+  G.secs.forEach(sec=>{
+    const bars=parseInt(sec.bars)||1;
+    const flex=bars/total;
+    tlHTML+=`<div class="dash-tl-blk" style="flex:${flex};background:${sec.color}">
+      <div class="dash-tl-nm">${sec.name}</div>
+      <div class="dash-tl-sub">${bars}마디${sec.repeat>1?' ×'+sec.repeat:''}</div>
+    </div>`;
+  });
+
+  // Section summary table
+  let tableRows='';
+  let prev={key:(G.songMetas[0]||{}).key||'',bpm:(G.songMetas[0]||{}).bpm||'',time:(G.songMetas[0]||{}).time||''};
+  G.secs.forEach((sec,si)=>{
+    ensureCG(sec);
+    const mo=sec.meta||{};
+    const curr={key:mo.key||prev.key,bpm:mo.bpm||prev.bpm,time:mo.time||prev.time};
+    const instrNames=(sec.instruments||[]).map(instr=>{
+      const def=INSTRS.find(d=>d.id===instr.instrId);
+      return instr.name||(def?def.name:'악기');
+    }).join(', ')||'–';
+    const metaStr=[
+      curr.key?curr.key:'',
+      curr.bpm?curr.bpm+' BPM':'',
+      curr.time?curr.time:''
+    ].filter(Boolean).join(' / ')||'–';
+    const changed=(si>0&&(mo.key||mo.bpm||mo.time))?'⚑ ':'';
+    tableRows+=`<tr>
+      <td><span class="dash-dot" style="background:${sec.color}"></span>${changed}${sec.name}</td>
+      <td>${parseInt(sec.bars)||0}마디${sec.repeat>1?' ×'+sec.repeat:''}</td>
+      <td>${metaStr}</td>
+      <td>${instrNames}</td>
+      <td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${sec.memo?sec.memo.substring(0,60)+(sec.memo.length>60?'…':''):'–'}</td>
+    </tr>`;
+    prev=curr;
+  });
+
+  const pageNum=G.secs.length?`총 ${G.secs.length}개 섹션 · ${total}마디`:'섹션 없음';
+
+  page.innerHTML=`
+    <div class="dash-pg-hdr">
+      <div style="flex:1">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:2px"><img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjAwIDIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM1MzVjYyIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1YzI0ODgiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdHIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM4OGVkYjgiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNWRkODk4Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJnUiIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmY5MDkwIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmNjI2MiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ1kiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmY2M2MCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmFhMzAiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJ3cyIgeD0iLTEwJSIgeT0iLTEwJSIgd2lkdGg9IjEyMCUiIGhlaWdodD0iMTIwJSI+CiAgICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjIuNSIgcmVzdWx0PSJibHVyIi8+CiAgICAgIDxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAuMSAgMCAwIDAgMCAwLjEgIDAgMCAwIDAgMC40ICAwIDAgMCAwLjUgMCIgaW49ImJsdXIiIHJlc3VsdD0ic2hhZG93Ii8+CiAgICAgIDxmZU1lcmdlPjxmZU1lcmdlTm9kZSBpbj0ic2hhZG93Ii8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgogIDwhLS0gQmFja2dyb3VuZCAtLT4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgcng9IjQwIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDwhLS0gR3JlZW4gYmxvY2sgKEkpIC0tPgogIDxyZWN0IHg9IjIwIiB5PSI4OCIgd2lkdGg9IjQ2IiBoZWlnaHQ9IjY4IiByeD0iNyIgZmlsbD0idXJsKCNnRykiLz4KICA8dGV4dCB4PSI0MyIgeT0iMTQzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic3lzdGVtLXVpLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiMxYTJhNWUiPkk8L3RleHQ+CiAgPCEtLSBSZWQgYmxvY2sgKFYpIC0tPgogIDxyZWN0IHg9Ijc3IiB5PSI3MCIgd2lkdGg9IjQ2IiBoZWlnaHQ9Ijg2IiByeD0iNyIgZmlsbD0idXJsKCNnUikiLz4KICA8dGV4dCB4PSIxMDAiIHk9IjE0MyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjMWEyYTVlIj5WPC90ZXh0PgogIDwhLS0gR29sZCBibG9jayAoQykgLS0+CiAgPHJlY3QgeD0iMTM0IiB5PSI5MyIgd2lkdGg9IjQ2IiBoZWlnaHQ9IjYzIiByeD0iNyIgZmlsbD0idXJsKCNnWSkiLz4KICA8dGV4dCB4PSIxNTciIHk9IjE0MyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjMWEyYTVlIj5DPC90ZXh0PgogIDwhLS0gV2F2ZWZvcm0gb3V0bGluZSAoZGFyayBzaGFkb3cpIC0tPgogIDxwYXRoIGQ9Ik0xMCwxMDQgQzE2LDEwNCAyMCw5NiAyNiw4NCBDMzAsNzQgMzQsNTggNDAsNDYgQzQ0LDU4IDQ4LDcwIDU0LDgwIEM1OCw4OCA2Miw5OCA2OCw5MCBDNzQsNzggODAsNTYgODgsMzggQzkzLDI0IDk3LDEyIDEwMCwxOCBDMTAzLDI0IDEwNyw0MiAxMTQsNjAgQzExOSw3MyAxMjQsODMgMTMyLDkwIEMxMzYsODIgMTQwLDY4IDE0Niw1OSBDMTUwLDcwIDE1Myw4MyAxNTgsOTMgQzE2MywxMDIgMTcwLDEwNiAxODAsMTA2IEMxODUsMTA2IDE5MCwxMDYgMTk1LDEwNiIKICAgICAgICBzdHJva2U9InJnYmEoMTUsMTUsNjUsMC41KSIgc3Ryb2tlLXdpZHRoPSIxMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPCEtLSBXYXZlZm9ybSB3aGl0ZSAtLT4KICA8cGF0aCBkPSJNMTAsMTA0IEMxNiwxMDQgMjAsOTYgMjYsODQgQzMwLDc0IDM0LDU4IDQwLDQ2IEM0NCw1OCA0OCw3MCA1NCw4MCBDNTgsODggNjIsOTggNjgsOTAgQzc0LDc4IDgwLDU2IDg4LDM4IEM5MywyNCA5NywxMiAxMDAsMTggQzEwMywyNCAxMDcsNDIgMTE0LDYwIEMxMTksNzMgMTI0LDgzIDEzMiw5MCBDMTM2LDgyIDE0MCw2OCAxNDYsNTkgQzE1MCw3MCAxNTMsODMgMTU4LDkzIEMxNjMsMTAyIDE3MCwxMDYgMTgwLDEwNiBDMTg1LDEwNiAxOTAsMTA2IDE5NSwxMDYiCiAgICAgICAgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI3LjUiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDwhLS0gVGltZWxpbmUgYmFyIC0tPgogIDxyZWN0IHg9IjE2IiB5PSIxNjYiIHdpZHRoPSIxNjgiIGhlaWdodD0iMTAiIHJ4PSI1IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNCkiLz4KICA8IS0tIFBsYXloZWFkIGFycm93IC0tPgogIDxwb2x5Z29uIHBvaW50cz0iODQsMTU4IDg0LDE4MiAxMDQsMTcwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuOTUpIi8+Cjwvc3ZnPgo=" style="width:48px;height:48px;border-radius:11px;flex-shrink:0"><div class="dash-song-title">${title}</div></div>
+        ${genre?`<div class="dash-song-sub">장르: ${genre}</div>`:''}
+        <div class="dash-metas-row">${metaChips||'<span style="color:#aaa;font-size:11px">곡 정보 없음</span>'}</div>
+      </div>
+      <div class="dash-pg-num">거시적 차트 (Macro)<br>${pageNum}</div>
+    </div>
+    <div class="dash-sec-lbl">전체 타임라인</div>
+    <div class="dash-tl">${tlHTML||'<span style="color:#aaa;font-size:12px">섹션이 없습니다</span>'}</div>
+    <div class="dash-sec-lbl" style="margin-top:10px">섹션 목록</div>
+    <table class="dash-tbl">
+      <thead><tr><th>섹션</th><th>마디</th><th>조성/BPM/박자</th><th>악기</th><th>메모</th></tr></thead>
+      <tbody>${tableRows||'<tr><td colspan="5" style="color:#aaa;text-align:center;padding:20px">섹션 없음</td></tr>'}</tbody>
+    </table>`;
+  return page;
+}
+
+function buildMicroPage(secs,startIdx){
+  const page=document.createElement('div');page.className='dash-page';
+  const pageNum=Math.floor(startIdx/3)+2;
+  const totalPages=Math.ceil(G.secs.length/3)+1;
+
+  let cardsHTML='';
+  secs.forEach((sec,ri)=>{
+    const si=startIdx+ri;
+    ensureCG(sec);
+    const mo=sec.meta||{};
+    const gm=G.songMetas[0]||{};
+
+    // Meta for this section
+    const metaChips=[];
+    if(mo.key||gm.key) metaChips.push(`<span class="dash-mc-chip">${mo.key||gm.key}</span>`);
+    if(mo.bpm||gm.bpm) metaChips.push(`<span class="dash-mc-chip" style="background:#fff3e8;color:#c2540a">${mo.bpm||gm.bpm} BPM</span>`);
+    if(mo.time||gm.time) metaChips.push(`<span class="dash-mc-chip" style="background:#e8f5e9;color:#2e7d32">${mo.time||gm.time}</span>`);
+
+    // Instruments
+    const instrTags=(sec.instruments||[]).map(instr=>{
+      const def=INSTRS.find(d=>d.id===instr.instrId)||INSTRS[INSTRS.length-2];
+      const nm=instr.name||(def?def.name:'악기');
+      return`<span class="dash-instr-tag">${def.s}${nm}${instr.detail?' ('+instr.detail+')':''}</span>`;
+    }).join('')||'<span style="color:#aaa;font-size:10px">악기 없음</span>';
+
+    // Chord grid (compact display)
+    const {div,cells}=sec.cg;
+    const bars=parseInt(sec.bars)||0;
+    let chordHTML='';
+    if(bars>0){
+      chordHTML='<div class="dash-chord-wrap">';
+      for(let b=0;b<bars;b++){
+        const row=cells[b]||[];
+        chordHTML+=`<div class="dash-chord-bar"><span class="dash-chord-bar-lbl">${b+1}</span>`;
+        for(let c=0;c<div;c++){
+          const ch=(row[c]||'').trim();
+          chordHTML+=`<span class="dash-chord-cell${!ch?' em':''}">${ch||'–'}</span>`;
+        }
+        chordHTML+='</div>';
+      }
+      chordHTML+='</div>';
+    } else {
+      chordHTML='<span style="color:#aaa;font-size:10px">코드 없음</span>';
+    }
+
+    cardsHTML+=`<div class="dash-mc" style="border-left-color:${sec.color}">
+      <div class="dash-mc-hdr">
+        <div class="dash-mc-title">${sec.name}</div>
+        <span class="dash-mc-badge">${bars}마디${sec.repeat>1?' · '+sec.repeat+'회 반복':''}</span>
+        <div class="dash-mc-meta">${metaChips.join('')}</div>
+      </div>
+      <div class="dash-mc-grid">
+        <div>
+          <div class="dash-mc-lbl">악기 레이어</div>
+          <div class="dash-instr-list">${instrTags}</div>
+        </div>
+        <div>
+          <div class="dash-mc-lbl">메모 / 편곡 아이디어</div>
+          ${sec.memo?`<div class="dash-memo">${esc(sec.memo)}</div>`:'<span style="color:#aaa;font-size:10px">메모 없음</span>'}
+        </div>
+        <div class="dash-mc-full">
+          <div class="dash-mc-lbl">코드 진행 (${{1:'마디',4:'4분할',8:'8분할'}[div]})</div>
+          ${chordHTML}
+        </div>
+      </div>
+    </div>`;
+  });
+
+  page.innerHTML=`
+    <div class="dash-pg-hdr">
+      <div><div class="dash-song-title" style="font-size:16px">미시적 차트 (Micro) — 섹션별 상세</div></div>
+      <div class="dash-pg-num">Page ${pageNum} / ${totalPages}</div>
+    </div>
+    ${cardsHTML}`;
+  return page;
+}
+
+/* ════════════════════════════════════════════════
+   VIEW MODE
+════════════════════════════════════════════════ */
+function goSectionVM(){
+  G.vm='section';
+  document.querySelectorAll('.vmb').forEach(b=>b.classList.toggle('on',b.dataset.vm==='section'));
+  renderTL();
+}
+function setVM(btn){
+  G.vm=btn.dataset.vm;
+  document.querySelectorAll('.vmb').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  renderTL();
+}
+
+/* ════════════════════════════════════════════════
+   RENDER ALL
+════════════════════════════════════════════════ */
+function renderAll(){
+  renderSB();renderTL();renderEd();renderSongMetas();
+}
+
+/* ════════════════════════════════════════════════
+   SAVE / LOAD
+════════════════════════════════════════════════ */
+function gi(id){return(document.getElementById(id)||{}).value||'';}
+function esc(s){return(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');}
+function getData(){
+  return{v:4,title:gi('gTitle'),genre:gi('gGenre'),songMetas:G.songMetas,secs:G.secs};
+}
+function save(){localStorage.setItem('apb4',JSON.stringify(getData()));}
+function doExport(){
+  const d=getData();
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([JSON.stringify(d,null,2)],{type:'application/json'}));
+  a.download=(d.title||'편곡보드')+'.json';a.click();
+}
+function doImport(){document.getElementById('fileIn').click();}
+function loadFile(ev){
+  const f=ev.target.files[0];if(!f)return;
+  const r=new FileReader();
+  r.onload=e=>{
+    try{
+      const d=JSON.parse(e.target.result);
+      G.secs=d.secs||d.sections||[];G.expIdx=null;G.edIdx=null;G.edOpen=false;
+      G.secs.forEach(migrateSec);
+      setField('gTitle',d.title||d.songTitle||'');
+      setField('gGenre',d.genre||d.songGenre||'');
+      if(d.songMetas&&d.songMetas.length) G.songMetas=d.songMetas;
+      else G.songMetas=[{key:d.key||d.songKey||'',bpm:d.bpm||d.songBpm||'',time:d.time||d.songTime||''}];
+      closeWelcome();renderAll();save();alert('✅ 불러오기 완료!');
+    }catch(err){alert('❌ 오류: '+err.message);}
+  };
+  r.readAsText(f);ev.target.value='';
+}
+function setField(id,v){const el=document.getElementById(id);if(el)el.value=v;}
+
+/* ════════════════════════════════════════════════
+   WELCOME SCREEN & NEW PROJECT
+════════════════════════════════════════════════ */
+function showWelcome(){
+  document.getElementById('welcomeOv').classList.remove('hidden');
+}
+function closeWelcome(){
+  document.getElementById('welcomeOv').classList.add('hidden');
+}
+function newProject(){
+  closeWelcome();
+  clearProject();
+}
+function importFromWelcome(){
+  closeWelcome();
+  doImport();
+}
+function clearProject(){
+  G.secs=[];G.expIdx=null;G.edIdx=null;G.edOpen=false;
+  G.songMetas=[{key:'',bpm:'',time:''}];
+  setField('gTitle','');setField('gGenre','');
+  renderAll();save();
+}
+function newProjectFromHeader(){
+  if(G.secs.length>0){
+    document.getElementById('newProjDlg').classList.add('on');
+  } else {
+    // 작업 중인 섹션 없으면 웰컴 스크린으로
+    clearProject();
+    showWelcome();
+  }
+}
+function closeNewProjDlg(){document.getElementById('newProjDlg').classList.remove('on');}
+function doNewProjSave(){
+  doExport();
+  // 파일 다운로드 후 초기화
+  setTimeout(()=>{closeNewProjDlg();clearProject();},400);
+}
+function doNewProjDiscard(){
+  closeNewProjDlg();
+  clearProject();
+}
+
+/* ════════════════════════════════════════════════
+   INIT
+════════════════════════════════════════════════ */
+function init(){
+  // Load saved data
+  const raw=localStorage.getItem('apb4')||localStorage.getItem('arrangeBoard_v3')||localStorage.getItem('arrangementBoard_v2')||localStorage.getItem('arrangementBoard');
+  let hasSaved=false;
+  if(raw){
+    try{
+      const d=JSON.parse(raw);
+      G.secs=d.secs||d.sections||[];
+      G.secs.forEach(migrateSec);
+      setField('gTitle',d.title||d.songTitle||'');
+      setField('gGenre',d.genre||d.songGenre||'');
+      if(d.songMetas&&d.songMetas.length) G.songMetas=d.songMetas;
+      else G.songMetas=[{key:d.key||d.songKey||'',bpm:d.bpm||d.songBpm||'',time:d.time||d.songTime||''}];
+      hasSaved=G.secs.length>0;
+    }catch(e){}
+  }
+
+  // Auto-save on header input change
+  ['gTitle','gGenre'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el)el.addEventListener('input',()=>{renderTL();save();});
+  });
+
+  // Close popups on overlay/background click
+  document.getElementById('addDlg').addEventListener('click',e=>{if(e.target===e.currentTarget)closeAddDlg();});
+  document.getElementById('ipOv').addEventListener('click',e=>{if(e.target===e.currentTarget)closeIP();});
+  document.getElementById('newProjDlg').addEventListener('click',e=>{if(e.target===e.currentTarget)closeNewProjDlg();});
+  document.addEventListener('click',e=>{
+    if(!e.target.closest('.mpop')&&!e.target.closest('.ms'))closeMPop();
+  });
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'){closeAddDlg();closeIP();closeMPop();closeDash();closeNewProjDlg();}
+    if((e.metaKey||e.ctrlKey)&&e.key==='n'){e.preventDefault();openAddDlg();}
+  });
+
+  renderAll();
+
+  // 저장된 프로젝트가 없으면 웰컴 화면 표시
+  if(!hasSaved) showWelcome();
+}
+
+init();
+</script>
+
+<script>
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>{
+    navigator.serviceWorker.register('./service-worker.js')
+      .then(r=>console.log('[SW] 등록:',r.scope))
+      .catch(e=>console.log('[SW] 오류:',e));
+  });
+}
+</script>
+</body>
+</html>
