@@ -4755,8 +4755,11 @@ function fallbackDownload(blob,filename){
 async function doImport(){
   // iPad/iOS: showOpenFilePicker가 있어도 .mabrd를 알 수 없는 형식으로 취급해
   // 파일이 목록에 안 보임 → 직접 <input> 사용이 안정적
+  // accept 속성을 제거해서 iOS Files 앱이 모든 파일을 표시하도록 함
   if(isIPad()||isMobile()||!window.showOpenFilePicker){
-    document.getElementById('fileIn').click();
+    const fi=document.getElementById('fileIn');
+    fi.removeAttribute('accept'); // iOS: accept 없애야 .mabrd가 보임
+    fi.click();
     return;
   }
   // 데스크탑: File System Access API 우선 시도
@@ -5603,13 +5606,18 @@ function init(){
   restoreHandles();
   // 스크롤 sticky 리스너
   initStickyScroll();
-  // 공유 URL 감지 (#share=...) - 공유 URL이 있으면 웰컴 없이 바로 로드
+  // 공유 URL 감지 (#share=... / #id=...) - 공유 URL이 있으면 웰컴 없이 바로 로드
   if(window.location.hash.startsWith('#share=')||window.location.hash.startsWith('#id=')){
     checkShareUrl(); // async, 내부에서 processImportData 호출
   } else {
     // 저장 데이터 없을 때만 웰컴 표시 (새로고침 시 프로젝트 유지)
     if(!hasSaved) showWelcome();
   }
+  // hashchange: 이미 열린 탭에 공유 링크를 붙여넣을 때도 동작 (Safari/Chrome)
+  window.addEventListener('hashchange',()=>{
+    const h=window.location.hash;
+    if(h.startsWith('#share=')||h.startsWith('#id=')){checkShareUrl();}
+  });
   // 공유 팝업 닫기 (배경 클릭)
   document.getElementById('shareOv').addEventListener('click',e=>{if(e.target===e.currentTarget)closeSharePop();});
 
