@@ -1,4 +1,4 @@
-const CACHE_NAME = 'arrange-board-v2';
+const CACHE_NAME = 'arrange-board-v3';
 const ASSETS = [
   './',
   './arrange-board.html',
