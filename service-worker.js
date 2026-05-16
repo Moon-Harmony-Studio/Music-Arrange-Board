@@ -1,9 +1,4 @@
-/* ════════════════════════════════════════
-   편곡보드 Service Worker
-   오프라인 캐싱으로 인터넷 없이도 사용 가능
-════════════════════════════════════════ */
-
-const CACHE_NAME = 'arrange-board-v2';
+const CACHE_NAME = 'arrange-board-v1';
 const ASSETS = [
   './',
   './arrange-board.html',
@@ -39,4 +34,3 @@ self.addEventListener('fetch', e => {
     })
   );
 });
-
