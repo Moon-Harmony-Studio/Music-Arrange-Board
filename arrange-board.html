@@ -580,6 +580,10 @@ body.hdr-open .kp-scale{width:80px;}
 .instr-blk.blk-sel{opacity:1!important;box-shadow:0 0 0 2px #fff,0 0 10px rgba(255,255,255,.25)!important;}
 /* drag-box hover highlight for instrument block */
 .instr-blk.blk-ms-on{opacity:1!important;box-shadow:0 0 0 2px rgba(124,111,247,.9),0 0 8px rgba(124,111,247,.4)!important;}
+/* instrument block label (icon + name) */
+.instr-blk-label{position:absolute;left:10px;right:10px;top:0;bottom:0;display:flex;align-items:center;gap:3px;overflow:hidden;pointer-events:none;}
+.instr-blk-label svg{width:11px;height:11px;flex-shrink:0;filter:brightness(0) invert(1);opacity:.8;}
+.instr-blk-nm{font-size:9px;font-weight:700;color:rgba(255,255,255,.88);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1;min-width:0;}
 /* Section row label (악기트랙 sticky label on left) */
 .sb-row.has-it-label{padding:0;display:flex;gap:0;}
 .sb-row-it-label{
@@ -1808,6 +1812,18 @@ function buildInstrTrack(){
           const rh=document.createElement('div');rh.className='instr-blk-handle instr-blk-hr';
           rh.title='드래그: 길이 조절 (1/8마디 단위)';
           blk.appendChild(lh);blk.appendChild(rh);
+          // 아이콘 + 이름 라벨
+          const lbl=document.createElement('div');lbl.className='instr-blk-label';
+          const iw=document.createElement('span');
+          iw.style.cssText='display:flex;align-items:center;flex-shrink:0;';
+          iw.innerHTML=def.s;
+          const lblSvg=iw.querySelector('svg');
+          if(lblSvg){lblSvg.setAttribute('width','11');lblSvg.setAttribute('height','11');}
+          lbl.appendChild(iw);
+          const nm=document.createElement('span');nm.className='instr-blk-nm';
+          nm.textContent=ti.name||def.name;
+          lbl.appendChild(nm);
+          blk.appendChild(lbl);
           attachInstrResize(blk,lh,rh,blkData,bars,cell,isSection,si,instrIdx,blkIdx);
           attachInstrMove(blk,blkData,bars,cell,si,instrIdx,blkIdx,tlDiv,isSection);
           // Double-click to delete block
