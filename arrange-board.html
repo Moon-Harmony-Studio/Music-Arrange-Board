@@ -629,16 +629,18 @@ body.hdr-open .kp-scale{width:80px;}
 }
 .instr-track-toggle:hover{border-color:var(--accent);color:var(--accent);}
 .instr-track-toggle.on{background:rgba(124,111,247,.15);border-color:var(--accent);color:var(--accent);}
-/* 악기 트랙 행 끝 + 버튼 */
-.instr-row-add{
-  position:sticky;right:0;z-index:6;flex-shrink:0;
-  width:30px;min-width:30px;
+/* 섹션 블록 행 오른쪽 끝 + 버튼 */
+.sb-row-add{
+  position:sticky;right:0;z-index:7;flex-shrink:0;
+  width:32px;min-width:32px;align-self:stretch;
   display:flex;align-items:center;justify-content:center;
-  background:var(--surface);border-left:1px solid var(--border);
-  font-size:16px;font-weight:400;color:var(--muted);
+  background:var(--surface2);border-left:1px solid var(--border);
+  font-size:18px;font-weight:300;color:var(--muted);
   cursor:pointer;transition:color .15s,background .15s;user-select:none;
 }
-.instr-row-add:hover{color:var(--accent);background:rgba(124,111,247,.12);}
+.sb-row-add:hover{color:var(--accent);background:rgba(124,111,247,.15);}
+/* 악기 트랙 행 오른쪽 정렬 스페이서 (sb-row-add와 동일 너비) */
+.instr-row-spacer-r{width:32px;min-width:32px;flex-shrink:0;position:sticky;right:0;background:var(--bg);border-left:1px solid var(--border);z-index:6;}
 /* Dashboard instrument matrix */
 .dash-instr-matrix{width:100%;border-collapse:collapse;font-size:10px;margin-top:0;table-layout:fixed;}
 .dash-instr-matrix th{padding:5px 6px;font-size:9px;font-weight:800;color:#fff;text-align:center;border:1px solid rgba(0,0,0,.1);min-width:40px;}
@@ -1208,7 +1210,7 @@ body.hdr-open header#mainHeader .hdr-center .logo-icon{
 /* ════════════════════════════════════════════════
    INSTRUMENT SVG DEFINITIONS
 ════════════════════════════════════════════════ */
-const APP_VERSION = 'v1.15  ·  2026-05-24';
+const APP_VERSION = 'v1.17  ·  2026-05-24';
 const svg=(i)=>`<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">${i}</svg>`;
 const INSTRS=[
   {id:'acoustic_guitar',name:'어쿠스틱 기타',cat:'현악기 (발현)',s:svg(`<line x1="16" y1="3" x2="16" y2="9"/><line x1="13" y1="3" x2="19" y2="3"/><ellipse cx="16" cy="13" rx="4" ry="3.5"/><path d="M12,13 Q9,14 9,18 Q9,22 12,24 Q14,25 16,25 Q18,25 20,24 Q23,22 23,18 Q23,14 20,13"/><circle cx="16" cy="19" r="2.5"/>`)},
@@ -2129,13 +2131,9 @@ function buildInstrTrack(){
       tlDiv.appendChild(cell);
     });
     row.appendChild(tlDiv);
-    // 오른쪽 끝 + 버튼 (섹션 추가)
-    const addBtn=document.createElement('div');
-    addBtn.className='instr-row-add';
-    addBtn.title='섹션 추가';
-    addBtn.textContent='+';
-    addBtn.addEventListener('click',e=>{e.stopPropagation();openAddDlg();});
-    row.appendChild(addBtn);
+    // sb-row-add(32px)와 너비 맞추기 위한 오른쪽 스페이서
+    const spacerR=document.createElement('div');spacerR.className='instr-row-spacer-r';
+    row.appendChild(spacerR);
     area.appendChild(row);
   });
   return area;
@@ -2369,6 +2367,14 @@ function buildSecRow(){
       }
     });
   }
+
+  // 섹션 행 오른쪽 끝 + 버튼
+  const sbAdd=document.createElement('div');
+  sbAdd.className='sb-row-add';
+  sbAdd.title='섹션 추가 (Shift+N)';
+  sbAdd.textContent='+';
+  sbAdd.addEventListener('click',e=>{e.stopPropagation();openAddDlg();});
+  wrap.appendChild(sbAdd);
 
   // 드래그 선택은 initDragSelect()에서 #tlScroll에 전역 등록됨
 
