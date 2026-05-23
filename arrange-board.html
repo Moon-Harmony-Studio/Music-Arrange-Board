@@ -1198,7 +1198,7 @@ body.hdr-open header#mainHeader .hdr-center .logo-icon{
 /* ════════════════════════════════════════════════
    INSTRUMENT SVG DEFINITIONS
 ════════════════════════════════════════════════ */
-const APP_VERSION = 'v1.12  ·  2026-05-23';
+const APP_VERSION = 'v1.13  ·  2026-05-23';
 const svg=(i)=>`<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">${i}</svg>`;
 const INSTRS=[
   {id:'acoustic_guitar',name:'어쿠스틱 기타',cat:'현악기 (발현)',s:svg(`<line x1="16" y1="3" x2="16" y2="9"/><line x1="13" y1="3" x2="19" y2="3"/><ellipse cx="16" cy="13" rx="4" ry="3.5"/><path d="M12,13 Q9,14 9,18 Q9,22 12,24 Q14,25 16,25 Q18,25 20,24 Q23,22 23,18 Q23,14 20,13"/><circle cx="16" cy="19" r="2.5"/>`)},
@@ -3109,14 +3109,14 @@ function copyBlk(){
 }
 function pasteBlk(){
   if(!G.clipBlk){showSaveToast('복사된 블록이 없습니다');return;}
-  // 붙여넣기 대상 섹션 결정: 다중 선택 > 선택된 블록의 섹션 > edIdx
+  // 붙여넣기 대상 섹션 결정: 다중 선택 > 마지막 클릭 섹션(edIdx) > 선택된 블록의 섹션
   let targetSis=[];
   if(G.tlMultiSel&&G.tlMultiSel.length>0){
     targetSis=[...G.tlMultiSel];
-  } else if(G.selBlk){
-    targetSis=[G.selBlk.si];
   } else if(G.edIdx!==null){
     targetSis=[G.edIdx];
+  } else if(G.selBlk){
+    targetSis=[G.selBlk.si];
   }
   if(!targetSis.length){showSaveToast('섹션을 먼저 선택하세요');return;}
   let lastSelBlk=null;
